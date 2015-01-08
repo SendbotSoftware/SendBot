@@ -2,10 +2,10 @@
 
 Meteor.startup(function () {
 
-    Players.remove({});
-    var sessionNumbers = ["1", "2","3","4","5","6" ];
+    Workouts.remove({});
+    var sessionNumbers = ["1", "2","3","4","5","6","7"];
     _.each(sessionNumbers, function (sessionNumber) {
-      Players.insert({
+      Workouts.insert({
         sessionNumber: sessionNumber,
         date: "12/25/2014",
         bodyWeight: 175,
@@ -18,6 +18,15 @@ Meteor.startup(function () {
         repMax : [200, 225, 250]
       });
     });
+});
+
+Meteor.methods({
+  signedUrl: function(url) {
+    // some proven-to-work-code that you can find at
+    // http://stackoverflow.com/questions/18546676
+    console.log(signed_url); // loggs the correctly signed url on the server
+    return signed_url;
+  }
 });
 
 

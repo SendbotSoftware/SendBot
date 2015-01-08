@@ -1,29 +1,30 @@
 //client only code
 
-Template.leaderboard.helpers({
-  players: function () {
-    return Players.find({}, { sort: { sessionNumber: 1 } });
+Template.workoutView.helpers({
+  workouts: function () {
+    return Workouts.find({}, { sort: { score: -1, name: 1 } });
   },
-  selectedName: function () {
-    var player = Players.findOne(Session.get("selectedPlayer"));
-    return player && player.sessionNumber;
+  selectedWorkout: function () {
+    var workout = Workouts.findOne(Session.get("selectedWorkout"));
+    return workout && workout.sessionNumber;
   }
 });
 
-Template.leaderboard.events({
+Template.workoutView.events({
   'click .inc': function () {
-    Players.update(Session.get("selectedPlayer"), {$inc: {score: 5}});
+    Workouts.update(Session.get("selectedWorkout"), {$inc: {score: 5}});
   }
 });
 
-Template.player.helpers({
+Template.workout.helpers({
   selected: function () {
-    return Session.equals("selectedPlayer", this._id) ? "selected" : '';
+    return Session.equals("selectedWorkout", this._id) ? "selected" : '';
   }
 });
 
-Template.player.events({
+Template.workout.events({
   'click': function () {
-    Session.set("selectedPlayer", this._id);
+    Session.set("selectedWorkout", this._id);
   }
 });
+

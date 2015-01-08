@@ -9,12 +9,12 @@
     <div class="logo"></div>
     <h1 class="title">SendBot</h1>
     <div class="subtitle">Select a Workout to Edit</div>
-    {{> leaderboard}}
+    {{> workoutView}}
   </div>
 </body>
 
-<template name="leaderboard">
-  <table class="leaderboard">
+<template name="workoutView">
+  <table class="workoutView">
    <tr>
    <th></th>
    <th>Date</th>
@@ -24,26 +24,25 @@
    <th>Effort Rating</th>
    <th>Grip 1 sets</th>
    <th>Grip 1 res</th>
-      <th>Grip 1 1RM</th>
+   <th>Grip 1 1RM</th>
 
-     <th>Grip 2 sets</th>
+   <th>Grip 2 sets</th>
    <th>Grip 2 res</th>
-      <th>Grip 2 1RM</th>
-
+   <th>Grip 2 1RM</th>
 
    <th>Grip 3 sets</th>
-      <th>Grip 3 res</th>
+   <th>Grip 3 res</th>
    <th>Grip 3 1RM</th>
    </tr>
 
-    {{#each players}}
-      {{> player}}
-    {{/each}}
+   {{#each workouts}}
+    {{> workout}}
+   {{/each}}
   </table>
 
-  {{#if selectedName}}
+  {{#if selectedWorkout}}
     <div class="details">
-      <div class="name">Edit Workout # {{selectedName}}</div>
+      <div class="name">Edit Workout # {{selectedWorkout.sessionNumber}}</div>
       <button class="inc">Edit</button>
 
     </div>
@@ -51,15 +50,13 @@
     <div class="message"></div>
   {{/if}}
      <div class="details">
-
       <button class="inc">New Workout</button>
-
     </div>
 
 </template>
 
-<template name="player">
-  <tr class="player {{selected}}">
+<template name="workout">
+  <tr class="workout {{selected}}">
 
   <td><span class="score">{{date}}</span></td>
   <td><span class="score">{{bodyWeight}}</span></td>
@@ -82,3 +79,5 @@
  
   </tr>
 </template>
+
+
