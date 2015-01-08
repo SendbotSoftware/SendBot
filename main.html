@@ -1,0 +1,51 @@
+<head>
+  <title>SendBot</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="logo"></div>
+    <h1 class="title">SendBot</h1>
+    <div class="subtitle">Select a Workout to Edit</div>
+    {{> leaderboard}}
+  </div>
+</body>
+
+<template name="leaderboard">
+  <table class="leaderboard">
+   <tr>
+   <th>Session Number</th>
+   <th>Body Weight</th>
+   <th>Score</th>
+   </tr>
+
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </table>
+
+  {{#if selectedName}}
+    <div class="details">
+      <div class="name">Edit Workout # {{selectedName}}</div>
+      <button class="inc">Edit</button>
+
+    </div>
+  {{else}}
+    <div class="message"></div>
+  {{/if}}
+     <div class="details">
+
+      <button class="inc">New Workout</button>
+
+    </div>
+
+</template>
+
+<template name="player">
+  <tr class="player {{selected}}">
+  <td><span class="score">{{bodyWeight}}</span></td>
+  <td><span class="score">{{score}}</span></td>
+  </tr>
+</template>
