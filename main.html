@@ -1,0 +1,83 @@
+<head>
+  <title>SendBot</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="logo"></div>
+    <h1 class="title">SendBot</h1>
+    <div class="subtitle">Select a Workout to Edit</div>
+    {{> workoutView}}
+  </div>
+</body>
+
+<template name="workoutView">
+  <table class="workoutView">
+   <tr>
+   <th></th>
+   <th>Date</th>
+   <th>Body Weight</th>
+   <th>Type</th>
+    <th>Reps</th>
+   <th>Effort Rating</th>
+   <th>Grip 1 sets</th>
+   <th>Grip 1 res</th>
+   <th>Grip 1 1RM</th>
+
+   <th>Grip 2 sets</th>
+   <th>Grip 2 res</th>
+   <th>Grip 2 1RM</th>
+
+   <th>Grip 3 sets</th>
+   <th>Grip 3 res</th>
+   <th>Grip 3 1RM</th>
+   </tr>
+
+   {{#each workouts}}
+    {{> workout}}
+   {{/each}}
+  </table>
+
+  {{#if selectedWorkout}}
+    <div class="details">
+      <div class="name">Edit Workout # {{selectedWorkout.sessionNumber}}</div>
+      <button class="inc">Edit</button>
+
+    </div>
+  {{else}}
+    <div class="message"></div>
+  {{/if}}
+     <div class="details">
+      <button class="inc">New Workout</button>
+    </div>
+
+</template>
+
+<template name="workout">
+  <tr class="workout {{selected}}">
+
+  <td><span class="score">{{date}}</span></td>
+  <td><span class="score">{{bodyWeight}}</span></td>
+  <td><span class="score">{{type}}</span></td>
+  <td><span class="score">{{repetitions}}</span></td>
+  <td><span class="score">{{effortRating}}</span></td>
+
+  <td><span class="score">{{this.sets.[0]}}</span></td>
+  <td><span class="score">{{this.resistance.[0]}}</span></td>
+  <td><span class="score">{{this.repMax.[0]}}</span></td>
+
+  <td><span class="score">{{this.sets.[1]}}</span></td>
+  <td><span class="score">{{this.resistance.[1]}}</span></td>
+  <td><span class="score">{{this.repMax.[1]}}</span></td>
+
+  <td><span class="score">{{this.sets.[2]}}</span></td>
+  <td><span class="score">{{this.resistance.[2]}}</span></td>
+  <td><span class="score">{{this.repMax.[2]}}</span></td>
+
+ 
+  </tr>
+</template>
+
+
