@@ -16,9 +16,24 @@
 <template name="leaderboard">
   <table class="leaderboard">
    <tr>
-   <th>Session Number</th>
+   <th></th>
+   <th>Date</th>
    <th>Body Weight</th>
-   <th>Score</th>
+   <th>Type</th>
+    <th>Reps</th>
+   <th>Effort Rating</th>
+   <th>Grip 1 sets</th>
+   <th>Grip 1 res</th>
+      <th>Grip 1 1RM</th>
+
+     <th>Grip 2 sets</th>
+   <th>Grip 2 res</th>
+      <th>Grip 2 1RM</th>
+
+
+   <th>Grip 3 sets</th>
+      <th>Grip 3 res</th>
+   <th>Grip 3 1RM</th>
    </tr>
 
     {{#each players}}
@@ -45,7 +60,25 @@
 
 <template name="player">
   <tr class="player {{selected}}">
+
+  <td><span class="score">{{date}}</span></td>
   <td><span class="score">{{bodyWeight}}</span></td>
-  <td><span class="score">{{score}}</span></td>
+  <td><span class="score">{{type}}</span></td>
+  <td><span class="score">{{repetitions}}</span></td>
+  <td><span class="score">{{effortRating}}</span></td>
+
+  <td><span class="score">{{this.sets.[0]}}</span></td>
+  <td><span class="score">{{this.resistance.[0]}}</span></td>
+  <td><span class="score">{{this.repMax.[0]}}</span></td>
+
+  <td><span class="score">{{this.sets.[1]}}</span></td>
+  <td><span class="score">{{this.resistance.[1]}}</span></td>
+  <td><span class="score">{{this.repMax.[1]}}</span></td>
+
+  <td><span class="score">{{this.sets.[2]}}</span></td>
+  <td><span class="score">{{this.resistance.[2]}}</span></td>
+  <td><span class="score">{{this.repMax.[2]}}</span></td>
+
+ 
   </tr>
 </template>

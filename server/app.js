@@ -7,8 +7,18 @@ Meteor.startup(function () {
     _.each(sessionNumbers, function (sessionNumber) {
       Players.insert({
         sessionNumber: sessionNumber,
+        date: "12/25/2014",
         bodyWeight: 175,
-        score: Math.floor(Random.fraction() * 10) * 5
+        type : "V",
+        repetitions : 5,
+        effortRating : 9,
+        grips : ["Half Crimp", "Pinch", "3FP"],
+        sets : [0,0,0],
+        resistance : [10, 15, 25],
+        repMax : [200, 225, 250]
       });
     });
 });
+
+
+   
