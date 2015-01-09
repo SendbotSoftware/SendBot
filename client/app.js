@@ -11,9 +11,19 @@ Template.workoutView.helpers({
 });
 
 Template.workoutView.events({
-  'click .inc': function () {
+  'click .edit': function () {
     Workouts.update(Session.get("selectedWorkout"), {$inc: {score: 5}});
-  }
+  },
+  'click .new': function () {
+    if(Workouts.find().count()==0){
+      Workouts.insert(generateInitialWorkout());
+
+    }else{
+    var userBodyWeight = 175;
+    Workouts.insert(generateWorkout(userBodyWeight));
+    };
+  },
+  
 });
 
 Template.workout.helpers({
@@ -27,4 +37,3 @@ Template.workout.events({
     Session.set("selectedWorkout", this._id);
   }
 });
-

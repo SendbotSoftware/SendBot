@@ -43,15 +43,17 @@
   {{#if selectedWorkout}}
     <div class="details">
       <div class="name">Edit Workout # {{selectedWorkout.sessionNumber}}</div>
-      <button class="inc">Edit</button>
+      <button class="edit">Edit</button>
 
     </div>
   {{else}}
     <div class="message"></div>
   {{/if}}
+
      <div class="details">
-      <button class="inc">New Workout</button>
+      <button class="new">New Workout</button>
     </div>
+
 
 </template>
 
@@ -79,5 +81,3 @@
  
   </tr>
 </template>
-
-
