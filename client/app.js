@@ -12,10 +12,7 @@ Template.workoutView.helpers({
 
 Template.workoutView.events({
   'click .edit': function () {
-
     openMyDialog();
-
-
   },
   'click .new': function () {
     if(Workouts.find().count()==0){
@@ -74,13 +71,9 @@ function openMyDialog(fs){ // this can be tied to an event handler in another te
           };
 
           Workouts.update(Session.get("selectedWorkout"),workout);
-
-
-
-
         }
       }
     }
   });
-  Blaze.renderWithData(Template.myDialog,Workouts.findOne(Session.get("selectedWorkout")),dialogNode);
+  Blaze.renderWithData(Template.editWorkout,Workouts.findOne(Session.get("selectedWorkout")),dialogNode);
 };
