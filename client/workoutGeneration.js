@@ -35,7 +35,7 @@ generateWorkout = function(userEnteredBodyweight){
 
     //get lastworkout from collection and build new workout variables
     var lastWorkout = getLastWorkout();
-    var workoutType = 'volume',
+    var workoutType = 'V',
     repetitions = calculate_reps(workoutType),
     effortRating = calculate_rpe().toString(),
     resistance = [Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[0]+wt_increase()))/100,
