@@ -12,7 +12,10 @@ Template.workoutView.helpers({
 
 Template.workoutView.events({
   'click .edit': function () {
-    Workouts.update(Session.get("selectedWorkout"), {$inc: {score: 5}});
+
+    openMyDialog();
+
+
   },
   'click .new': function () {
     if(Workouts.find().count()==0){
@@ -23,7 +26,7 @@ Template.workoutView.events({
     Workouts.insert(generateWorkout(userBodyWeight));
     };
   },
-  
+
 });
 
 Template.workout.helpers({
@@ -37,3 +40,47 @@ Template.workout.events({
     Session.set("selectedWorkout", this._id);
   }
 });
+
+function openMyDialog(fs){ // this can be tied to an event handler in another template
+  bootbox.dialog({
+    title: 'This will populate with content from the "myDialog" template',
+    message: "<div id='dialogNode'></div>",
+    buttons: {
+      do: {
+        label: "ok",
+        className: "btn btn-primary",
+        callback: function() {
+          var bodyWeight = $('#bodyWeight').val();
+          var res1 = $('#res1').val();
+          var res2 = $('#res2').val();
+          var res3 = $('#res3').val();
+          var sets1 = $('#sets1').val();
+          var sets2 = $('#sets2').val();
+          var sets3 = $('#sets3').val();
+
+          workoutToModify = Workouts.findOne(Session.get("selectedWorkout"));
+
+          workout = {
+            sessionNumber: workoutToModify.sessionNumber,
+            date : workoutToModify.date,
+            type : workoutToModify.type,
+            repetitions : workoutToModify.repetitions,
+            bodyWeight : bodyWeight,
+            effortRating : workoutToModify.effortRating,
+            grips : ['half crimp','pinch','3FP'],
+            sets : [sets1, sets2, sets3],
+            resistance : [res1, res2, res3],
+            repMax : workoutToModify.repMax
+          };
+
+          Workouts.update(Session.get("selectedWorkout"),workout);
+
+
+
+
+        }
+      }
+    }
+  });
+  Blaze.renderWithData(Template.myDialog,Workouts.findOne(Session.get("selectedWorkout")),dialogNode);
+};

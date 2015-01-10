@@ -5,6 +5,7 @@
 </head>
 
 <body>
+
   <div class="outer">
     <div class="logo"></div>
     <h1 class="title">SendBot</h1>
@@ -14,6 +15,8 @@
 </body>
 
 <template name="workoutView">
+    
+
   <table class="workoutView">
    <tr>
    <th></th>
@@ -55,6 +58,26 @@
     </div>
 
 
+</template>
+
+
+<template name="myDialog">
+<form id="myform">
+Session Number : {{sessionNumber}} <br>
+Bodyweight : <input type="text" id="bodyWeight" value="{{bodyWeight}}" > <br>
+Type : {{type}}<br>
+Repititions : {{repetitions}}<br>
+Effort Rating : {{effortRating}}<br>
+{{grips.[0]}} sets: <input type="text" id="sets1" value="{{sets.[0]}}"> <br>
+{{grips.[1]}} sets: <input type="text" id="sets2" value="{{sets.[1]}}"> <br>
+{{grips.[2]}} sets: <input type="text" id="sets3" value="{{sets.[2]}}"> <br>
+{{grips.[0]}} resistance: <input type="text" id="res1" value="{{resistance.[0]}}"> <br>
+{{grips.[1]}} resistance: <input type="text" id="res2" value="{{resistance.[1]}}"> <br>
+{{grips.[2]}} resistance: <input type="text" id="res3" value="{{resistance.[2]}}"> <br>
+{{grips.[0]}} repMax: {{repMax.[0]}}<br>
+{{grips.[1]}} repMax: {{repMax.[1]}}<br>
+{{grips.[2]}} repMax: {{repMax.[2]}} <br>
+</form>
 </template>
 
 <template name="workout">
