@@ -17,47 +17,47 @@
 
 <template name="workoutView">
   {{#with workouts}}
-  {{#if count}}
-    <table class="workoutView">
-      <tr>
-        <th></th>
-        <th>Date</th>
-        <th>Body Weight</th>
-        <th>Type</th>
-        <th>Reps</th>
-        <th>Effort Rating</th>
-        <th>Grip 1 sets</th>
-        <th>Grip 1 res</th>
-        <th>Grip 1 1RM</th>
+    {{#if count}}
+      <table class="workoutView">
+        <tr>
+          <th></th>
+          <th>Date</th>
+          <th>Body Weight</th>
+          <th>Type</th>
+          <th>Reps</th>
+          <th>Effort Rating</th>
+          <th>Grip 1 sets</th>
+          <th>Grip 1 res</th>
+          <th>Grip 1 1RM</th>
 
-        <th>Grip 2 sets</th>
-        <th>Grip 2 res</th>
-        <th>Grip 2 1RM</th>
+          <th>Grip 2 sets</th>
+          <th>Grip 2 res</th>
+          <th>Grip 2 1RM</th>
 
-        <th>Grip 3 sets</th>
-        <th>Grip 3 res</th>
-        <th>Grip 3 1RM</th>
-      </tr>
-      {{#each workouts}}
-      {{> workout}}
-      {{/each}}
-    </table>
-    {{#if selectedWorkout}}
-      <div class="details">
-        <div class="name">Edit Workout # {{selectedWorkout.sessionNumber}}</div>
-        <button class="edit">Edit</button>
-      </div>
+          <th>Grip 3 sets</th>
+          <th>Grip 3 res</th>
+          <th>Grip 3 1RM</th>
+        </tr>
+        {{#each workouts}}
+        {{> workout}}
+        {{/each}}
+      </table>
+      {{#if selectedWorkout}}
+        <div class="details">
+          <div class="name">Edit Workout # {{selectedWorkout.sessionNumber}}</div>
+          <button class="edit">Edit</button>
+        </div>
+      {{else}}
+        <div class="message"></div>
+      {{/if}}
+        <div class="details">
+          <button class="new_workout">New Workout</button>
+        </div>
     {{else}}
-      <div class="message"></div>
-    {{/if}}
       <div class="details">
-        <button class="new_workout">New Workout</button>
-      </div> 
-  {{else}}
-    <div class="details">
-      <button class="new_cycle">New Cycle</button>
-    </div> 
-  {{/if}}
+        <button class="new_cycle">New Cycle</button>
+      </div>
+    {{/if}}
   {{/with}}
 </template>
 
