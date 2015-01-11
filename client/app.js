@@ -2,7 +2,7 @@
 
 Template.workoutView.helpers({
   workouts: function () {
-    return Workouts.find({}, { sort: { score: -1, name: 1 } });
+    return Workouts.find({}, { sort: { sessionNumber: 1} });
   },
   selectedWorkout: function () {
     var workout = Workouts.findOne(Session.get("selectedWorkout"));
