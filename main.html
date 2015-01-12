@@ -17,90 +17,94 @@
 
 <template name="workoutView">
   {{#with workouts}}
-  {{#if count}}
-    <table class="workoutView">
-      <tr>
-        <th></th>
-        <th>Date</th>
-        <th>Body Weight</th>
-        <th>Type</th>
-        <th>Reps</th>
-        <th>Effort Rating</th>
-        <th>Grip 1 sets</th>
-        <th>Grip 1 res</th>
-        <th>Grip 1 1RM</th>
-
-        <th>Grip 2 sets</th>
-        <th>Grip 2 res</th>
-        <th>Grip 2 1RM</th>
-
-        <th>Grip 3 sets</th>
-        <th>Grip 3 res</th>
-        <th>Grip 3 1RM</th>
-      </tr>
-      {{#each workouts}}
-      {{> workout}}
-      {{/each}}
-    </table>
-    {{#if selectedWorkout}}
+    {{#if count}}
+      {{#if selectedWorkout}}
+        <div class="details">
+          <button class="edit">Edit</button>
+        </div>
+        {{else}}
+        <div class="message"></div>
+      {{/if}}
       <div class="details">
-        <div class="name">Edit Workout # {{selectedWorkout.sessionNumber}}</div>
-        <button class="edit">Edit</button>
+        <button class="new-workout">New Workout</button>
       </div>
+      <table class="workoutView">
+        <tr>
+          <th></th> <!--For session #-->
+          <th></th> <!--For selection checkbox-->
+          <th>Date</th>
+          <th>Body Weight</th>
+          <th>Type</th>
+          <th>Reps</th>
+          <th>Effort Rating</th>
+          <th>Grip 1 sets</th>
+          <th>Grip 1 res</th>
+          <th>Grip 1 1RM</th>
+
+          <th>Grip 2 sets</th>
+          <th>Grip 2 res</th>
+          <th>Grip 2 1RM</th>
+
+          <th>Grip 3 sets</th>
+          <th>Grip 3 res</th>
+          <th>Grip 3 1RM</th>
+          <th></th>
+        </tr>
+        {{#each workouts}}
+        {{> workout}}
+        {{/each}}
+      </table>
+
     {{else}}
-      <div class="message"></div>
-    {{/if}}
       <div class="details">
-        <button class="new_workout">New Workout</button>
-      </div> 
-  {{else}}
-    <div class="details">
-      <button class="new_cycle">New Cycle</button>
-    </div> 
-  {{/if}}
+        <button class="new-cycle">New Cycle</button>
+      </div>
+    {{/if}}
   {{/with}}
 </template>
 
 
 <template name="editWorkout">
   <form id="myform">
-    Session Number : {{sessionNumber}} <br>
-    Bodyweight : <input type="text" id="bodyWeight" value="{{bodyWeight}}" > <br>
-    Type : {{type}}<br>
-    Repititions : {{repetitions}}<br>
-    Effort Rating : {{effortRating}}<br>
-    {{grips.[0]}} sets: <input type="text" id="sets1" value="{{sets.[0]}}"> <br>
-    {{grips.[1]}} sets: <input type="text" id="sets2" value="{{sets.[1]}}"> <br>
-    {{grips.[2]}} sets: <input type="text" id="sets3" value="{{sets.[2]}}"> <br>
-    {{grips.[0]}} resistance: <input type="text" id="res1" value="{{resistance.[0]}}"> <br>
-    {{grips.[1]}} resistance: <input type="text" id="res2" value="{{resistance.[1]}}"> <br>
-    {{grips.[2]}} resistance: <input type="text" id="res3" value="{{resistance.[2]}}"> <br>
-    {{grips.[0]}} repMax: {{repMax.[0]}}<br>
-    {{grips.[1]}} repMax: {{repMax.[1]}}<br>
-    {{grips.[2]}} repMax: {{repMax.[2]}} <br>
+    Session Number : {{sessionNumber}} <br/>
+    Bodyweight : <input type="text" id="bodyWeight" value="{{bodyWeight}}" > <br/>
+    Type : {{type}}<br/>
+    Repititions : {{repetitions}}<br/>
+    Effort Rating : {{effortRating}}<br/>
+    {{grips.[0]}} sets: <input type="text" id="sets1" value="{{sets.[0]}}"> <br/>
+    {{grips.[1]}} sets: <input type="text" id="sets2" value="{{sets.[1]}}"> <br/>
+    {{grips.[2]}} sets: <input type="text" id="sets3" value="{{sets.[2]}}"> <br/>
+    {{grips.[0]}} resistance: <input type="text" id="res1" value="{{resistance.[0]}}"> <br/>
+    {{grips.[1]}} resistance: <input type="text" id="res2" value="{{resistance.[1]}}"> <br/>
+    {{grips.[2]}} resistance: <input type="text" id="res3" value="{{resistance.[2]}}"> <br/>
+    {{grips.[0]}} repMax: {{repMax.[0]}}<br/>
+    {{grips.[1]}} repMax: {{repMax.[1]}}<br/>
+    {{grips.[2]}} repMax: {{repMax.[2]}} <br/>
   </form>
 </template>
 
 <template name="newCycle">
   <form id="myform">
-    Bodyweight : <input type="text" id="bodyWeight" value="{{bodyWeight}}" > <br>
-    Choose 3 Grips:<br>
-    <input type="checkbox" id="half_crimp" > half_crimp<br>
-    <input type="checkbox" id="pinch" value="true"> pinch<br>
-    <input type="checkbox" id="four_finger_open" value="true"> four_finger_open<br>
-    <input type="checkbox" id="three_finger_open" value="true"> three_finger_open<br>
-    <input type="checkbox" id="two_finger_open" value="true"> two_finger_open<br>
+    Bodyweight : <input type="text" id="bodyWeight" value="{{bodyWeight}}"/> <br/>
+    Choose 3 Grips:<br/>
+    <input type="checkbox" id="half_crimp"/>Half Crimp<br/>
+    <input type="checkbox" id="pinch" value="true"/>Pinch<br/>
+    <input type="checkbox" id="four_finger_open" value="true"/>Four Finger Open<br/>
+    <input type="checkbox" id="three_finger_open" value="true"/>Three Finger Open<br/>
+    <input type="checkbox" id="two_finger_open" value="true"/>Two Finger Open<br/>
   </form>
 </template>
 
 <template name="workout">
   <tr class="workout {{selected}}">
+    <td><input type="checkbox" checked="{{checked}}" class="toggle-checked" /></td>
     <td><span class="score">{{date}}</span></td>
     <td><span class="score">{{bodyWeight}}</span></td>
     <td><span class="score">{{type}}</span></td>
     <td><span class="score">{{repetitions}}</span></td>
     <td><span class="score">{{effortRating}}</span></td>
 
+    <!-- TODO @kerwinloukusa,@rbalakrishnan Refactor and make this a loop-->
     <td><span class="score">{{this.sets.[0]}}</span></td>
     <td><span class="score">{{this.resistance.[0]}}</span></td>
     <td><span class="score">{{this.repMax.[0]}}</span></td>
@@ -112,5 +116,6 @@
     <td><span class="score">{{this.sets.[2]}}</span></td>
     <td><span class="score">{{this.resistance.[2]}}</span></td>
     <td><span class="score">{{this.repMax.[2]}}</span></td>
+    <td><button class="delete">&times;</button></td>
   </tr>
 </template>
