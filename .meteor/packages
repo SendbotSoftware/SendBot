@@ -12,4 +12,8 @@ anti:modals
 less
 nemo64:bootstrap
 bootstrap
+<<<<<<< HEAD
 iron:router
+=======
+mike:mocha
+>>>>>>> bc0bfa3c46d3ff6f25e7f4aa016f2fa4ef81cd06
