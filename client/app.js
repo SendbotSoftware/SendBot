@@ -32,6 +32,14 @@ Template.workoutView.events({
 
   'click .new-cycle': function () {
     newCycleDialog();
+  },
+
+  'click .delete-selected': function () {
+    Workouts.remove({})
+  },
+  'click .toggle-checked': function () {
+    // Set the checked property to the opposite of its current value
+    Workouts.update(this._id, {$set: {checked: ! this.checked}});
   }
 
 });
@@ -44,7 +52,13 @@ Template.workout.helpers({
 
 Template.workout.events({
   'click': function () {
-    Session.set('selectedWorkout', this._id);
+    if(Session.get('selectedWorkout') === this._id) {
+      Session.set('selectedWorkout', '');
+      //$('button.edit').attr('disabled',true);
+    } else {
+      Session.set('selectedWorkout', this._id);
+      //$('button.edit').attr('disabled',false);
+    }
   },
   'click .delete': function () {
     var self = this;

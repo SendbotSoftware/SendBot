@@ -18,15 +18,10 @@
 <template name="workoutView">
   {{#with workouts}}
     {{#if count}}
-      {{#if selectedWorkout}}
-        <div class="details">
-          <button class="edit">Edit</button>
-        </div>
-        {{else}}
-        <div class="message"></div>
-      {{/if}}
+
       <div class="details">
         <button class="new-workout">New Workout</button>
+        <button class="edit" disabled="{{#if selectedWorkout}}false{{else}}true{{/if}}">Edit</button>
       </div>
       <table class="workoutView">
         <tr>
@@ -96,7 +91,7 @@
 </template>
 
 <template name="workout">
-  <tr class="workout {{selected}}">
+  <tr class="workout {{selected}} {{checked}}">
     <td><input type="checkbox" checked="{{checked}}" class="toggle-checked" /></td>
     <td><span class="score">{{date}}</span></td>
     <td><span class="score">{{bodyWeight}}</span></td>
