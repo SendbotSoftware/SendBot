@@ -1,3 +1,13 @@
+Template.newWorkoutTemplate.helpers({
+
+});
+
+Template.newWorkoutTemplate.events({
+  'click .next': function () {
+    Workouts.insert(generateWorkout($('#bodyWeight').val()));
+    Router.go('home');
+  },
+});
 
 generateInitialWorkout = function(userEnteredBodyweight){
 
