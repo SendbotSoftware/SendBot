@@ -12,4 +12,5 @@ anti:modals
 less
 nemo64:bootstrap
 bootstrap
+iron:router
 mike:mocha
