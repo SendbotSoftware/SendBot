@@ -91,7 +91,7 @@
 </template>
 
 <template name="workout">
-  <tr class="workout {{selected}} {{checked}}">
+  <tr class="workout {{selected}} {{#if checked}}checked{{/if}}">
     <td><input type="checkbox" checked="{{checked}}" class="toggle-checked" /></td>
     <td><span class="score">{{date}}</span></td>
     <td><span class="score">{{bodyWeight}}</span></td>
