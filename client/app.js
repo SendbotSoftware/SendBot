@@ -16,14 +16,13 @@ Router.map(function () {
     });
     this.route('editWorkout', {
         template: 'editWorkoutTemplate',
-             data : {
-             someValue: Session.get('selectedWorkout')
-        },
+        data : function () {return Workouts.findOne(Session.get('selectedWorkout'))}
     });
       this.route('newWorkout', {
         template: 'newWorkoutTemplate',
     });
 });
+
 
 
 

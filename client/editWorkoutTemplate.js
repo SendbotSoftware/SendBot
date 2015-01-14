@@ -1,17 +1,13 @@
 /*Template Events and Helpers Functions Listed Here:*/
 
 Template.editWorkoutTemplate.events({
-
+  'click .save': function () {
+    saveWorkout();
+    Router.go('home');
+  },
 });
 
 Template.editWorkoutTemplate.helpers({
-    workouts: function () {
-    return Workouts.find({}, { sort: { sessionNumber: 1} });
-  },
-  selectedWorkout: function () {
-    var workout = Workouts.findOne(Session.get(someValue));
-    return workout && workout.sessionNumber;
-  }
 
 });
 
@@ -44,4 +40,6 @@ function saveWorkout(fs){
           };
           Workouts.update(Session.get('selectedWorkout'),workout);
 }
+
+
 
