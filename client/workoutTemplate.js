@@ -8,7 +8,12 @@ Template.workoutTemplate.events({
   'click': function () {
     Session.set('selectedWorkout', this._id);
   },
-  'click .delete': function () {
+
+  'click .toggle-checked': function () {
+    Workouts.update(this._id, {$set: {checked: ! this.checked}});
+  },
+
+  'click .delete-workout': function () {
     var self = this;
     bootbox.confirm("Delete workout #" + self.sessionNumber, function(result) {
       if(result) {

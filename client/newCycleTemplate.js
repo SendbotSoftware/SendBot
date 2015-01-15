@@ -71,7 +71,7 @@ function newCycleDialog(fs){ // this can be tied to an event handler in another 
       }
     }
   });
-  Blaze.renderWithData(Template.newCycle,Workouts.findOne(Session.get('selectedWorkout')), $('#newWorkoutModal')[0]);
+  Blaze.renderWithData(Template.newCycle, Workouts.findOne(Session.get('selectedWorkout')), $('#newWorkoutModal')[0]);
 }
 
 function getDate() {
