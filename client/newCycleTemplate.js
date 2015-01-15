@@ -4,7 +4,9 @@ Template.newCycleStepOneTemplate.helpers({
 
 Template.newCycleStepOneTemplate.events({
   'click .next': function () {
-    Router.go('newCycleStepTwo');
+     if ($('#newCycleFormStepOne').parsley().validate()== true){
+      Router.go('newCycleStepTwo');
+    }
   }
 });
 
@@ -14,8 +16,10 @@ Template.newCycleStepTwoTemplate.helpers({
 
 Template.newCycleStepTwoTemplate.events({
   'click .next': function () {
+    if ($('#newCycleFormStepTwo').parsley().validate()== true){
     Workouts.insert(generateInitialWorkout(175));
     Router.go('home');
+   }
   }
 });
 

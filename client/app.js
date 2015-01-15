@@ -18,8 +18,12 @@ Router.map(function () {
         template: 'editWorkoutTemplate',
         data : function () {return Workouts.findOne(Session.get('selectedWorkout'))}
     });
-      this.route('newWorkout', {
+    this.route('newWorkout', {
         template: 'newWorkoutTemplate',
+    });
+    this.route('workoutInProgress', {
+        template: 'workoutInProgressTemplate',
+        data : function () {return Workouts.findOne({sessionNumber: Workouts.find().count()})}
     });
 });
 
