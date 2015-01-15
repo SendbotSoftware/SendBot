@@ -1,8 +1,8 @@
 
 <template name="newCycleStepOneTemplate">
 <div class="outer">
-  <form id="myform">
-    Bodyweight : <input type="text" id="bodyWeight" value="{{bodyWeight}}"/> <br/>
+  <form id="newCycleFormStepOne" data-parsley-validate>
+    Bodyweight : <input type="text" id="bodyWeight" data-parsley-range="[40,300]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
     Choose 3 Grips:<br/>
     <input type="checkbox" id="half_crimp"/>Half Crimp<br/>
     <input type="checkbox" id="pinch" value="true"/>Pinch<br/>
@@ -16,10 +16,10 @@
 
 <template name="newCycleStepTwoTemplate">
 <div class="outer">
-  <form id="myform">
-    Grip 1 HangTime :  <input type="text" id="bodyWeight" value="{{bodyWeight}}"/> <br/>
-    Grip 2 HangTime  : <input type="text" id="bodyWeight" value="{{bodyWeight}}"/> <br/>
-    Grip 3 HangTime  : <input type="text" id="bodyWeight" value="{{bodyWeight}}"/> <br/>
+  <form id="newCycleFormStepTwo" data-parsley-validate>
+    Grip 1 HangTime :  <input type="text" id="hangTimeOne" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
+    Grip 2 HangTime  : <input type="text" id="hangTimeTwo" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
+    Grip 3 HangTime  : <input type="text" id="hangTimeThree" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
   </form>
   <button class="next">Next</button>
   </div>

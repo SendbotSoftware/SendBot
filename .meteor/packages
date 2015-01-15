@@ -14,3 +14,4 @@ nemo64:bootstrap
 bootstrap
 iron:router
 mike:mocha
+amr:parsley.js
