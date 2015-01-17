@@ -5,8 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 bootboxjs
 anti:modals
 less
@@ -14,3 +12,5 @@ nemo64:bootstrap
 bootstrap
 iron:router
 mike:mocha
+accounts-password
+accounts-base

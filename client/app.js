@@ -6,21 +6,25 @@ Router.configure({
 Router.map(function () {
     this.route('home', {
         path: '/',
-        template: 'homeTemplate',
+        template: 'homeTemplate'
     });
     this.route('newCycleStepOne', {
-        template: 'newCycleStepOneTemplate',
+        template: 'newCycleStepOneTemplate'
     });
     this.route('newCycleStepTwo', {
-        template: 'newCycleStepTwoTemplate',
+        template: 'newCycleStepTwoTemplate'
     });
     this.route('editWorkout', {
         template: 'editWorkoutTemplate',
-        data : function () {return Workouts.findOne(Session.get('selectedWorkout'))}
+        data : function () {return Meteor.call('findOne', Session.get('selectedWorkout'))}
     });
-      this.route('newWorkout', {
-        template: 'newWorkoutTemplate',
+    this.route('newWorkout', {
+        template: 'newWorkoutTemplate'
     });
+    this.route('login', {
+        template: 'loginTemplate'
+    });
+
 });
 
 

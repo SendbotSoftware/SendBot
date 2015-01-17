@@ -14,7 +14,7 @@ Template.newCycleStepTwoTemplate.helpers({
 
 Template.newCycleStepTwoTemplate.events({
   'click .next': function () {
-    Workouts.insert(generateInitialWorkout(175));
+    Meteor.call('addWorkout', generateInitialWorkout(175));
     Router.go('home');
   }
 });
@@ -50,9 +50,6 @@ function newCycleDialog(fs){ // this can be tied to an event handler in another 
             grips.push('two finger open');
           }
 
-          // TODO kerwinloukusa this is a read operation. Does the value stored get used anywhere in the scope of this function?
-          var workoutToModify = Workouts.findOne(Session.get('selectedWorkout'));
-
           var workout = {
             sessionNumber: 1,
             date : getDate(),
@@ -66,12 +63,12 @@ function newCycleDialog(fs){ // this can be tied to an event handler in another 
             repMax : [225, 255, 265]
           };
 
-          Workouts.insert(workout);
+          Meteor.call('addWorkout', workout);
         }
       }
     }
   });
-  Blaze.renderWithData(Template.newCycle,Workouts.findOne(Session.get('selectedWorkout')), $('#newWorkoutModal')[0]);
+  Blaze.renderWithData(Template.newCycle, Meteor.call('findOne', Session.get('selectedWorkout')), $('#newWorkoutModal')[0]);
 }
 
 function getDate() {

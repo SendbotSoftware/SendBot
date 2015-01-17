@@ -1,9 +1,9 @@
 Template.workoutViewTemplate.helpers({
   workouts: function () {
-    return Workouts.find({}, { sort: { sessionNumber: 1} });
+    return Meteor.call('findWorkouts', {}, { sort: { sessionNumber: 1} });
   },
   selectedWorkout: function () {
-    var workout = Workouts.findOne(Session.get('selectedWorkout'));
+    var workout = Meteor.call('findOne', Session.get('selectedWorkout'));
     return workout && workout.sessionNumber;
   }
 });

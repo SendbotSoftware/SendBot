@@ -4,9 +4,9 @@ Template.newWorkoutTemplate.helpers({
 
 Template.newWorkoutTemplate.events({
   'click .next': function () {
-    Workouts.insert(generateWorkout($('#bodyWeight').val()));
+    Meteor.call('addWorkout', generateWorkout($('#bodyWeight').val()));
     Router.go('home');
-  },
+  }
 });
 
 generateInitialWorkout = function(userEnteredBodyweight){
@@ -38,7 +38,7 @@ generateInitialWorkout = function(userEnteredBodyweight){
 };
 
 getLastWorkout = function(){
-    return Workouts.findOne({sessionNumber: Workouts.find().count()});
+    return Meteor.call('getLastPerformedWorkout');
 };
 
 generateWorkout = function(userEnteredBodyweight){

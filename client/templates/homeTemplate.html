@@ -1,3 +1,7 @@
 <template name="homeTemplate">
-{{> workoutViewTemplate}}
+    {{#if currentUser}}
+        {{> workoutViewTemplate}}
+    {{else}}
+        {{> loginTemplate}}
+    {{/if}}
 </template>
