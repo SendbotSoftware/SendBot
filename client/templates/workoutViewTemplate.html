@@ -35,16 +35,16 @@
         {{/each}}
       </table>
             <div class="details">
-        <button class="new-workout">New Workout</button>
+        <button class="btn" id="new-workout">New Workout</button>
       </div>
     {{else}}
       <div class="details">
-        <button class="new-cycle">New Cycle</button>
+        <button class="btn" id="new-cycle">New Cycle</button>
       </div>
     {{/if}}
           {{#if selectedWorkout}}
         <div class="details">
-          <button class="edit">Edit</button>
+          <button class="btn" id="edit-workout">Edit</button>
         </div>
         {{else}}
         <div class="message"></div>

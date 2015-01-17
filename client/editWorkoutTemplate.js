@@ -34,6 +34,7 @@ function saveWorkout(fs){
           var workoutToModify = Workouts.findOne(Session.get('selectedWorkout'));
 
           var workout = {
+            cycleNumber: 1,
             sessionNumber: workoutToModify.sessionNumber,
             date : workoutToModify.date,
             type : workoutToModify.type,

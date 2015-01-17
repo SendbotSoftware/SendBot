@@ -25,6 +25,16 @@ body {
   padding: 0;
 }
 
+.menu {
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: .3em;
+  margin: 0 0 .25em;
+  text-align: center;
+  text-indent: .3em;
+  text-transform: uppercase;
+}
+
 .outer {
   margin: 0 auto;
   max-width: 480px;
@@ -37,7 +47,6 @@ body {
   background-size: contain;
   height: 5em;
   margin: 0 auto .75em;
-  width: 7em;
 }
 
 .title {

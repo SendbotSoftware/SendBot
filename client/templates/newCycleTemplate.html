@@ -1,26 +1,59 @@
 
 <template name="newCycleStepOneTemplate">
 <div class="outer">
-  <form id="newCycleFormStepOne" data-parsley-validate>
-    Bodyweight : <input type="text" id="bodyWeight" data-parsley-range="[40,300]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
-    Choose 3 Grips:<br/>
-    <input type="checkbox" id="half_crimp"/>Half Crimp<br/>
-    <input type="checkbox" id="pinch" value="true"/>Pinch<br/>
-    <input type="checkbox" id="four_finger_open" value="true"/>Four Finger Open<br/>
-    <input type="checkbox" id="three_finger_open" value="true"/>Three Finger Open<br/>
-    <input type="checkbox" id="two_finger_open" value="true"/>Two Finger Open<br/>
-  </form>
-  <button class="next">Next</button>
-  </div>
+ <form id="demo-form" data-parsley-validate>
+   <div class="first block1 show"> 
+      Bodyweight : <input type="text" id="bodyWeight" data-parsley-range="[40,300]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" data-parsley-group="block1" > <br/>
+      Choose 3 Grips:<br/>
+      <input type="checkbox" id="half_crimp" data-parsley-group="block1" checked/>Half Crimp<br/>
+      <input type="checkbox" id="pinch" data-parsley-group="block1" checked/>Pinch<br/>
+      <input type="checkbox" id="four_finger_open" data-parsley-group="block1" />Four Finger Open<br/>
+      <input type="checkbox" id="three_finger_open" data-parsley-group="block1" checked/>Three Finger Open<br/>
+      <input type="checkbox" id="two_finger_open" data-parsley-group="block1" />Two Finger Open<br/>
+     <span class="next btn btn-info pull-right" data-current-block="1" data-next-block="2" id="next">Next ></span>
+   </div>
+ 
+   <div class="second block2 hidden">
+      Grip 1 HangTime :  <input type="text" id="hangTimeOne" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" data-parsley-group="block2" > <br/>
+      Grip 2 HangTime  : <input type="text" id="hangTimeTwo" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" data-parsley-group="block2" > <br/>
+      Grip 3 HangTime  : <input type="text" id="hangTimeThree" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" data-parsley-group="block2" > <br/>
+      <span class="next btn btn-info pull-left" data-current-block="2" data-next-block="1">Previous</span>
+     <input type="submit" id="submit" class="btn btn-default pull-right" />
+   </div>
+</form>
+</div>
 </template>
 
 <template name="newCycleStepTwoTemplate">
 <div class="outer">
-  <form id="newCycleFormStepTwo" data-parsley-validate>
-    Grip 1 HangTime :  <input type="text" id="hangTimeOne" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
-    Grip 2 HangTime  : <input type="text" id="hangTimeTwo" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
-    Grip 3 HangTime  : <input type="text" id="hangTimeThree" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
-  </form>
-  <button class="next">Next</button>
+ 
   </div>
 </template>
+
+
+
+<!-- 
+<script type="text/javascript">
+$(document).ready(function () {
+  $('.next').on('click', function () {
+    var current = $(this).data('currentBlock'),
+      next = $(this).data('nextBlock');
+
+    // only validate going forward. If current group is invalid, do not go further
+    // .parsley().validate() returns validation result AND show errors
+    if (next > current)
+      if (false === $('#demo-form').parsley().validate('block' + current))
+        return;
+
+    // validation was ok. We can go on next step.
+    $('.block' + current)
+      .removeClass('show')
+      .addClass('hidden');
+
+    $('.block' + next)
+      .removeClass('hidden')
+      .addClass('show');
+
+  });
+});
+</script> -->
