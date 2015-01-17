@@ -1,14 +1,3 @@
-//Enumeration Definitions
-var EFFORT = {
-  HIGH : 9, 
-  MAX: 10
-};
-
-var WOTYPE = {
-    VOLUME: 'v',
-    INTENSITY: 'i'
-}
-
 getLastWorkout = function(){
     return Workouts.findOne({sessionNumber: Workouts.find().count()});
 };

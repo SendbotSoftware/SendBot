@@ -9,28 +9,36 @@ Template.timerTemplate.events({
 Template.timerTemplate.rendered = function() {
     if(!this._rendered) {
           this._rendered = true;
-          interval = Meteor.setInterval(timeLeft, 1000);
+          setTimer();
       
     }
 }
 
-var clock, interval, timeLeft;
-
-clock = 10;
+var clock, interval, timeLeft,reps;
+reps = 0;
+clock = 8;
 
 timeLeft = function() {
   if (clock > 0) {
     clock--;
     Session.set("time", clock);
-    return console.log(clock);
-  } else {
-    console.log("That's All Folks");
+    return;
+  } else if(reps>0) {
+    interval = Meteor.setInterval(timeLeft, 1000);
+  }
+  else  {
     return Meteor.clearInterval(interval);
   }
 };
 
 if (Meteor.isClient) {
-    Template.timer.time = function() {
+    Template.timerTemplate.time = function() {
         return Session.get("time");
     };
 }
+
+setTimer = function(){
+    interval = Meteor.setInterval(timeLeft, 1000);
+    reps = 3;
+
+};

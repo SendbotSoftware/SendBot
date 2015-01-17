@@ -1,13 +1,4 @@
-//Enumeration Definitions
-var EFFORT = {
-  HIGH : 9, 
-  MAX: 10
-};
 
-var WORKOUT_TYPE = {
-    VOLUME: 'v',
-    INTENSITY: 'i'
-};
 
 Template.newCycleStepOneTemplate.helpers({
 
@@ -133,7 +124,7 @@ function calculate_rpe(wo_type, reps) {
 //calculate workout Reps based upon workout type
 function calculate_reps(wo_type) {
 
-     if (wo_type == WOTYPE.VOLUME) {
+     if (wo_type == WORKOUT_TYPE.VOLUME) {
           return (Math.floor(Math.random() * 4) + 3);
       } else {
           return (Math.floor(Math.random() * 3) + 1);
