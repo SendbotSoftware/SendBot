@@ -1,6 +1,6 @@
 /*Template Events and Helpers Functions Listed Here:*/
 
-Template.editWorkoutTemplate.events({
+Template.workoutInProgressTemplate.events({
   'click .save': function () {
     if (saveWorkout()){
     Router.go('home');
@@ -8,11 +8,11 @@ Template.editWorkoutTemplate.events({
   },
 });
 
-Template.editWorkoutTemplate.helpers({
+Template.workoutInProgressTemplate.helpers({
 
 });
 
-Template.editWorkoutTemplate.rendered = function () {
+Template.workoutInProgressTemplate.rendered = function () {
 
   $('#editWorkoutForm').parsley({trigger: 'change'});
 }
@@ -22,7 +22,7 @@ Template.editWorkoutTemplate.rendered = function () {
 
 function saveWorkout(fs){ 
 
-          if ($('#editWorkoutForm').parsley().validate()== true){      
+          if ($('#workoutInProgressForm').parsley().validate()== true){      
           var bodyWeight = $('#bodyWeight').val();
           var res1 = $('#res1').val();
           var res2 = $('#res2').val();
@@ -31,10 +31,9 @@ function saveWorkout(fs){
           var sets2 = $('#sets2').val();
           var sets3 = $('#sets3').val();
 
-          var workoutToModify = Workouts.findOne(Session.get('selectedWorkout'));
+          var workoutToModify = Workouts.findOne({sessionNumber: Workouts.find().count()});
 
           var workout = {
-            cycleNumber: 1,
             sessionNumber: workoutToModify.sessionNumber,
             date : workoutToModify.date,
             type : workoutToModify.type,
@@ -46,7 +45,7 @@ function saveWorkout(fs){
             resistance : [res1, res2, res3],
             repMax : workoutToModify.repMax
           };
-          Workouts.update(Session.get('selectedWorkout'),workout);
+          Workouts.update(Workouts.findOne({sessionNumber: Workouts.find().count()})._id,workout);
 
           return true;
         }else {

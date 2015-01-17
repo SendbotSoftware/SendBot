@@ -10,14 +10,14 @@ Template.workoutViewTemplate.helpers({
 
 
 Template.workoutViewTemplate.events({
-  'click .edit': function () {
+  'click #edit-workout': function () {
     Router.go('editWorkout');
   },
-  'click .new-workout': function () {
+  'click #new-workout': function () {
     Router.go('newWorkout');
   },
 
-  'click .new-cycle': function () {
+  'click #new-cycle': function () {
     Router.go('newCycleStepOne');
   }
 });

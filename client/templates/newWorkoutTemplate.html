@@ -1,7 +1,7 @@
 <template name="newWorkoutTemplate">
   <div class="outer">
-	  <form id="myform">
-	    Bodyweight : <input type="text" id="bodyWeight" value="" > <br/>
+	  <form id="newWorkoutForm" data-parsley-validate>
+	    Bodyweight : <input type="text" id="bodyWeight" data-parsley-range="[40,300]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
 	  </form>
 	  <button class="next">Next</button>
   </div>
