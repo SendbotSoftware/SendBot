@@ -31,7 +31,7 @@ Template.newCycleStepOneTemplate.events({
 
   'click #submit': function(){
     Workouts.insert(processNewCycleData());
-    Router.go('workoutInProgress');
+    Router.go('set');
   }
 
 

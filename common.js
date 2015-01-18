@@ -11,3 +11,6 @@ WORKOUT_TYPE = {
     VOLUME: 'v',
     INTENSITY: 'i'
 };
+
+GRIP_COUNTER = 0;
+SET_COUNTER = 0;

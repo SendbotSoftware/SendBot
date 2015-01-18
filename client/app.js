@@ -37,6 +37,12 @@ Router.map(function () {
     this.route('timer', {
         template: 'timerTemplate',
     });
+    this.route('setData', {
+        template: 'setDataTemplate',
+    });
+        this.route('set', {
+        template: 'setTemplate',
+    });
     
 
 });

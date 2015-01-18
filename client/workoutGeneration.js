@@ -6,7 +6,7 @@ generateWorkout = function(userEnteredBodyweight){
 
     //get lastworkout from collection and build new workout variables
     var lastWorkout = getLastWorkout();
-    var workoutType = WOTYPE.VOLUME,
+    var workoutType = WORKOUT_TYPE.VOLUME,
     repetitions = calculate_reps(workoutType),
     effortRating = calculate_rpe().toString(),
     resistance = [Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[0]+wt_increase()))/100,
@@ -45,7 +45,7 @@ function calculate_rpe(wo_type, reps) {
 //calculate workout Reps based upon workout type
 function calculate_reps(wo_type) {
 
-     if (wo_type == WOTYPE.VOLUME) {
+     if (wo_type == WORKOUT_TYPE.VOLUME) {
           return (Math.floor(Math.random() * 4) + 3);
       } else {
           return (Math.floor(Math.random() * 3) + 1);
