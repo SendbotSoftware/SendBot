@@ -58,6 +58,6 @@ if (Meteor.isClient) {
 
 
 setTimer = function(input_reps){
-    interval = Meteor.setInterval(timeLeft, 5);
+    interval = Meteor.setInterval(timeLeft, 50);
     reps = input_reps;
 };
