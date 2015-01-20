@@ -16,7 +16,7 @@ Router.map(function () {
     });
     this.route('editWorkout', {
         template: 'editWorkoutTemplate',
-        data : function () {return Meteor.call('findOne', Session.get('selectedWorkout'))}
+        data : function () {return Workouts.findOne(Session.get('selectedWorkout'))}
     });
     this.route('newWorkout', {
         template: 'newWorkoutTemplate'
@@ -25,11 +25,7 @@ Router.map(function () {
         template: 'loginTemplate'
     });
     this.route('showWorkouts', {
-        template: 'workoutViewTemplate',
-        data: function () {Meteor.call('findWorkouts', {}, {sort: {sessionNumber: 1}}, function(err, result) {
-            Session.set('workouts', result);
-        })}
-
+        template: 'workoutViewTemplate'
     })
 
 });

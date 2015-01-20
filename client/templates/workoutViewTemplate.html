@@ -1,50 +1,52 @@
 <template name="workoutViewTemplate">
+    {{#if workouts}}
+        <div class="outer">
+            <div class="logo"></div>
+            <h1 class="title">SendBot</h1>
+            <div class="subtitle"></div>
 
-<div class="outer">
-    <div class="logo"></div>
-    <h1 class="title">SendBot</h1>
-    <div class="subtitle"></div>
+            <table class="workoutView">
+                <tr>
+                <th></th> <!--For session #-->
+                <th></th> <!--For selection checkbox-->
+                <th>Date</th>
+                <th>Body Weight</th>
+                <th>Type</th>
+                <th>Reps</th>
+                <th>Effort Rating</th>
+                <th>Grip 1 sets</th>
+                <th>Grip 1 res</th>
+                <th>Grip 1 1RM</th>
 
-    <table class="workoutView">
-        <tr>
-        <th></th> <!--For session #-->
-        <th></th> <!--For selection checkbox-->
-        <th>Date</th>
-        <th>Body Weight</th>
-        <th>Type</th>
-        <th>Reps</th>
-        <th>Effort Rating</th>
-        <th>Grip 1 sets</th>
-        <th>Grip 1 res</th>
-        <th>Grip 1 1RM</th>
+                <th>Grip 2 sets</th>
+                <th>Grip 2 res</th>
+                <th>Grip 2 1RM</th>
 
-        <th>Grip 2 sets</th>
-        <th>Grip 2 res</th>
-        <th>Grip 2 1RM</th>
+                <th>Grip 3 sets</th>
+                <th>Grip 3 res</th>
+                <th>Grip 3 1RM</th>
+                <th></th>
+                </tr>
+                  {{#each workouts}}
+                    {{> workoutTemplate}}
+                  {{/each}}
+            </table>
+            <div class="details">
+              <button class="new-workout">New Workout</button>
+            </div>
 
-        <th>Grip 3 sets</th>
-        <th>Grip 3 res</th>
-        <th>Grip 3 1RM</th>
-        <th></th>
-        </tr>
-        {{#if workouts}}
-          {{#each workouts}}
-            {{> workoutTemplate}}
-          {{/each}}
-        {{/if}}
-    </table>
-    <div class="details">
-      <button class="new-workout">New Workout</button>
-    </div>
+            {{#if selectedWorkout}}
+              <div class="details">
+                <button class="edit">Edit</button>
+              </div>
+            {{else}}
+              <div class="message"></div>
+            {{/if}}
 
-    {{#if selectedWorkout}}
-      <div class="details">
-        <button class="edit">Edit</button>
-      </div>
+
+        </div>
     {{else}}
-      <div class="message"></div>
+        {{> newWorkoutTemplate}}
     {{/if}}
 
-  
-    </div>  
 </template>

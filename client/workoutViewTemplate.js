@@ -1,10 +1,10 @@
 Template.workoutViewTemplate.helpers({
   selectedWorkout: function () {
-    var workout = Meteor.call('findOne', Session.get('selectedWorkout'));
+    var workout = Workouts.findOne(Session.get('selectedWorkout'));
     return workout && workout.sessionNumber;
   },
   workouts: function () {
-    return Session.get('workouts');
+    return Workouts.find({}, {sort: {sessionNumber: 1}}).fetch();
   }
 
 });

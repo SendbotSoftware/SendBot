@@ -20,13 +20,7 @@ Template.newCycleStepTwoTemplate.events({
         if(typeof(err) !== 'undefined') {
           console.log(err);
         } else {
-          if(result.length === 0) {
-            Router.go('newCycleStepOne');
-          } else {
-            Session.set('workouts', result);
-            Router.go('showWorkouts');
-          }
-
+          Router.go('showWorkouts');
         }
       });
     });

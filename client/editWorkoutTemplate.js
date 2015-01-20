@@ -24,7 +24,7 @@ function saveWorkout(fs){
           var sets2 = $('#sets2').val();
           var sets3 = $('#sets3').val();
 
-          var workoutToModify = Meteor.call('findOne', Session.get('selectedWorkout'));
+          var workoutToModify = Workouts.findOne(Session.get('selectedWorkout'));
 
           var workout = {
             sessionNumber: workoutToModify.sessionNumber,
@@ -38,7 +38,7 @@ function saveWorkout(fs){
             resistance : [res1, res2, res3],
             repMax : workoutToModify.repMax
           };
-          Meteor.call('updateSelected', Session.get('selectedWorkout'), workout);
+        Workouts.update(Session.get('selectedWorkout'), workout)
 }
 
 

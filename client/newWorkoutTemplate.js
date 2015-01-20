@@ -4,18 +4,11 @@ Template.newWorkoutTemplate.helpers({
 
 Template.newWorkoutTemplate.events({
   'click .next': function () {
-    Meteor.call('addWorkout', generateWorkout($('#bodyWeight').val()), function(err, result){
+    Meteor.call('addWorkout', generateWorkout($('#bodyWeight').val()), function(err){
         if(typeof(err) !== 'undefined') {
             console.log(err);
         } else {
-            if(result.length === 0) {
-                Router.go('home');
-            } else {
-                Session.set('workouts', result);
-                Router.go('showWorkouts');
-
-            }
-
+            Router.go('showWorkouts');
         }
     });
   }
@@ -50,8 +43,7 @@ generateInitialWorkout = function(userEnteredBodyweight){
 };
 
 getLastWorkout = function(){
-    var workouts = Session.get('workouts');
-    return workouts[workouts.length-1] || undefined;
+    return Workouts.findOne({sessionNumber: Workouts.find().count()});
 };
 
 generateWorkout = function(userEnteredBodyweight){

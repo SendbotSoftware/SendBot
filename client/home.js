@@ -2,23 +2,18 @@ Template.homeTemplate.helpers({
 
 });
 
+Meteor.subscribe('hangBoardWorkouts');
 
 Template.homeTemplate.events({
     'click .show-workouts': function () {
-        //TODO use pub/sub to avoid excessive code duplication
-        Meteor.call('findWorkouts', {}, {sort: {sessionNumber: 1}}, function(err, result) {
+        Meteor.call('findWorkouts', {}, {sort: {sessionNumber: 1}}, function(err) {
             if(typeof(err) !== 'undefined') {
                 console.log(err);
             } else {
-                if(result.length === 0) {
-                    Router.go('newCycleStepOne');
-                } else {
-                    Session.set('workouts', result);
-                    Router.go('showWorkouts');
-
-                }
-
+                console.log('everything went fine in the findWorkouts call within home.js');
+                Router.go('showWorkouts');
             }
+
         });
     }
 });
