@@ -6,7 +6,7 @@
     <div class="subtitle"></div>
 
     <table class="workoutView">
-      <tr>
+        <tr>
         <th></th> <!--For session #-->
         <th></th> <!--For selection checkbox-->
         <th>Date</th>
@@ -26,10 +26,12 @@
         <th>Grip 3 res</th>
         <th>Grip 3 1RM</th>
         <th></th>
-      </tr>
-      {{#each workouts}}
-      {{> workoutTemplate}}
-      {{/each}}
+        </tr>
+        {{#if workouts}}
+          {{#each workouts}}
+            {{> workoutTemplate}}
+          {{/each}}
+        {{/if}}
     </table>
     <div class="details">
       <button class="new-workout">New Workout</button>

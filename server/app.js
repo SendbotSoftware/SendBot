@@ -9,7 +9,7 @@ if (Meteor.isServer) {
                  throw new Meteor.Error("not-authorized");
                  }*/
 
-                Workouts.insert(workout);
+                return Workouts.insert(workout);
             },
             deleteWorkout: function (criteria) {
                 // check if user is logged in prior to performing db interaction
@@ -25,12 +25,7 @@ if (Meteor.isServer) {
                 return Workouts.findOne(query);
             },
             findWorkouts: function (criteria, projection) {
-                var result = Workouts.find(criteria, projection).fetch();
-                console.log('Finding workouts for');
-                console.dir(criteria);
-                console.dir(projection);
-                console.log(result);
-                return result;
+                return Workouts.find(criteria, projection).fetch();
             },
             updateSelected: function (selectedWorkout, workout) {
                 Workouts.update(selectedWorkout, workout);

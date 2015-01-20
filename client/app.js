@@ -25,7 +25,11 @@ Router.map(function () {
         template: 'loginTemplate'
     });
     this.route('showWorkouts', {
-        template: 'workoutViewTemplate'
+        template: 'workoutViewTemplate',
+        data: function () {Meteor.call('findWorkouts', {}, {sort: {sessionNumber: 1}}, function(err, result) {
+            Session.set('workouts', result);
+        })}
+
     })
 
 });
