@@ -1,4 +1,4 @@
-Template.register.events({
+Template.registerTemplate.events({
     'submit #register-form' : function(event, target) {
         event.preventDefault();
         var email = target.find('#account-email').value

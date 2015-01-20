@@ -12,7 +12,7 @@ Template.workoutTemplate.events({
     var self = this;
     bootbox.confirm("Delete workout #" + self.sessionNumber, function(result) {
       if(result) {
-        Meteor.call('removeWorkouts', self._id);
+        Meteor.call('deleteWorkout', self._id);
       }
     });
   }

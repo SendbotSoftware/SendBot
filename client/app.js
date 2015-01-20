@@ -24,6 +24,9 @@ Router.map(function () {
     this.route('login', {
         template: 'loginTemplate'
     });
+    this.route('showWorkouts', {
+        template: 'workoutViewTemplate'
+    })
 
 });
 

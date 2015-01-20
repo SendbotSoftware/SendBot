@@ -4,7 +4,7 @@ Template.editWorkoutTemplate.events({
   'click .save': function () {
     saveWorkout();
     Router.go('home');
-  },
+  }
 });
 
 Template.editWorkoutTemplate.helpers({

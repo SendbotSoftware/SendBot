@@ -1,44 +1,47 @@
 //server only code
+if (Meteor.isServer) {
+    Meteor.startup(function () {
+        Meteor.methods({
+            addWorkout: function (workout) {
+                // Make sure the user is logged in before inserting a task
 
-Meteor.startup(function () {
+                /*if (! Meteor.userId()) {
+                 throw new Meteor.Error("not-authorized");
+                 }*/
 
-    Meteor.call('removeAllWorkouts');
-    
-});
+                Workouts.insert(workout);
+            },
+            deleteWorkout: function (criteria) {
+                // check if user is logged in prior to performing db interaction
+                Workouts.remove(criteria);
+            },
+            removeAllWorkouts: function () {
+                Workouts.remove({});
+            },
+            removeWorkouts: function (query) {
+                Workouts.remove(query)
+            },
+            findOne: function (query) {
+                return Workouts.findOne(query);
+            },
+            findWorkouts: function (criteria, projection) {
+                var result = Workouts.find(criteria, projection).fetch();
+                console.log('Finding workouts for');
+                console.dir(criteria);
+                console.dir(projection);
+                console.log(result);
+                return result;
+            },
+            updateSelected: function (selectedWorkout, workout) {
+                Workouts.update(selectedWorkout, workout);
+            },
+            getLastPerformedWorkout: function () {
+                return Workouts.findOne({sessionNumber: Workouts.find().count()});
+            }
+        });
+    });
+}
 
-Meteor.methods({
-    addWorkout: function (workout) {
-        // Make sure the user is logged in before inserting a task
-
-        /*if (! Meteor.userId()) {
-            throw new Meteor.Error("not-authorized");
-        }*/
-
-        Workouts.insert(workout);
-    },
-    deleteWorkout: function (taskId) {
-        // check if user is logged in prior to performing db interaction
-        Workouts.remove({});
-    },
-    removeAllWorkouts: function() {
-        Workouts.remove({});
-    },
-    removeWorkouts: function(query) {
-        Workouts.remove(query)
-    },
-    findOne: function(query) {
-        return Workouts.findOne(query);
-    },
-    findWorkouts: function(criteria, projection) {
-        return Workouts.find(criteria, projection);
-    },
-    updateSelected: function(selectedWorkout, workout) {
-        Workouts.update(selectedWorkout, workout);
-    },
-    getLastPerformedWorkout: function() {
-        return Workouts.findOne({sessionNumber: Workouts.find().count()});
-    }
-});
 
 //caclulate current date
 function getDate() {

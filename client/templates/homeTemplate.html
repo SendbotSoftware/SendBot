@@ -1,7 +1,5 @@
 <template name="homeTemplate">
-    {{#if currentUser}}
-        {{> workoutViewTemplate}}
-    {{else}}
-        {{> loginTemplate}}
-    {{/if}}
+    <!-- check if user is logged in -->
+    <div class="outer"><button class="show-workouts">View workouts</button></div>
+
 </template>

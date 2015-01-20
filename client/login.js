@@ -1,4 +1,4 @@
-Template.login.events({
+Template.loginTemplate.events({
 
     'submit #login-form' : function(e, t){
         e.preventDefault();
