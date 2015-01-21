@@ -23,7 +23,7 @@ Template.setDataTemplate.events({
 saveSetData = function(){
     currentWorkout = Workouts.findOne({sessionNumber: Workouts.find().count()});
     sets = currentWorkout.sets;
-    sets[GRIP_COUNTER] = SET_COUNTER;
+    sets[GRIP_COUNTER] = SET_COUNTER+1;
 
     Workouts.update({
         _id: currentWorkout._id
@@ -31,5 +31,8 @@ saveSetData = function(){
         $set: {sets:sets}
     });
 };
+
+
+
 
 

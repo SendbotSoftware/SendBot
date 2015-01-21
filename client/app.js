@@ -40,8 +40,12 @@ Router.map(function () {
     this.route('setData', {
         template: 'setDataTemplate',
     });
-        this.route('set', {
+    this.route('set', {
         template: 'setTemplate',
+        data : {
+            currentGrip:  function () {return Workouts.findOne({sessionNumber: Workouts.find().count()}).grips[GRIP_COUNTER]},
+            currentRes: function () {return Workouts.findOne({sessionNumber: Workouts.find().count()}).resistance[GRIP_COUNTER]}
+        }
     });
     
 

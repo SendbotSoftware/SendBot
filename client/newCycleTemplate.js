@@ -97,10 +97,14 @@ function processNewCycleData(fs){
 
 timeToOneRM = function(hangTimes,load){
   load = +load;
-  rmOne = 3.5*Math.log(hangTimes[0])*load/7+5;     
-  rmTwo = 3.5*Math.log(hangTimes[1])*load/7+5; 
-  rmThree = 3.5*Math.log(hangTimes[2])*load/7+5; 
+  rmOne = round((3.5*Math.log(hangTimes[0])*load/7+5),2);     
+  rmTwo = round(3.5*Math.log(hangTimes[1])*load/7+5,2); 
+  rmThree = round(3.5*Math.log(hangTimes[2])*load/7+5,2); 
   return [+rmOne,+rmTwo,+rmThree];
+};
+
+function round(value, decimals) {
+    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 };
 
 function getCycleNumber(){

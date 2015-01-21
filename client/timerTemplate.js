@@ -3,6 +3,24 @@ Template.timerTemplate.helpers({
 });
 
 Template.timerTemplate.events({
+     'click #high-effort': function () {
+        SET_COUNTER = SET_COUNTER + 1;
+         Router.go('timer');
+    },
+    'click #max-effort': function () {
+        saveSetData();
+        SET_COUNTER = 0;
+        GRIP_COUNTER = GRIP_COUNTER+1;
+        if(GRIP_COUNTER<3){
+            Meteor.clearInterval(interval);
+            Router.go('set');
+        }else{
+            GRIP_COUNTER = 0;
+            Meteor.clearInterval(interval);
+            
+            Router.go('workoutView');
+        }
+    }
 
 });
 
@@ -13,6 +31,18 @@ Template.timerTemplate.rendered = function() {
       
     }
 }
+
+saveSetData = function(){
+    currentWorkout = Workouts.findOne({sessionNumber: Workouts.find().count()});
+    sets = currentWorkout.sets;
+    sets[GRIP_COUNTER] = SET_COUNTER+1;
+
+    Workouts.update({
+        _id: currentWorkout._id
+    }, {
+        $set: {sets:sets}
+    });
+};
 
 var clock, interval, timeLeft,reps, rest_flag;
 rest_flag = false;
@@ -36,8 +66,7 @@ timeLeft = function() {
         clock = 8;
         }
     }else if(reps ==0){
-        Meteor.clearInterval(interval);
-        return Router.go('setData');
+       return Meteor.clearInterval(interval);
     }
   }
 };
@@ -58,6 +87,6 @@ if (Meteor.isClient) {
 
 
 setTimer = function(input_reps){
-    interval = Meteor.setInterval(timeLeft, 50);
+    interval = Meteor.setInterval(timeLeft, 1);
     reps = input_reps;
 };
