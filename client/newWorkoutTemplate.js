@@ -25,7 +25,7 @@ generateInitialWorkout = function(userEnteredBodyweight){
     gripsTemp = ['half crimp','pinch','3FP'],
     setsTemp = ['4', '4', '4'],
     resistanceTemp = ['15', '15', '17'],
-    repMaxTemp = ['145', '155' ,'165'];
+    repMaxTemp = ['145', '155' ,'165'],
 
     workout = {
         sessionNumber: sessionNumberTemp,
@@ -37,7 +37,9 @@ generateInitialWorkout = function(userEnteredBodyweight){
         grips : gripsTemp,
         sets : setsTemp,
         resistance : resistanceTemp,
-        repMax : repMaxTemp
+        repMax : repMaxTemp,
+        owner: Meteor.userId(),
+        username: Meteor.user().username
     };
     return workout;
 };
