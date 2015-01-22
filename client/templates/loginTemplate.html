@@ -1,13 +1,6 @@
 <template name="loginTemplate">
     <div class="outer">
-        <form id="login-form" action="action">
-
-            Email: <input type="email" id="login-email" /> <br/>
-            Password: <input type="password" id="login-password" /> <br/>
-            <input type="submit" id="login-button" value="Sign in" /> <br/>
-            <input type="button" id="register-button" value="Register"/> <br/>
-
-        </form>
+        {{> loginButtons}}
     </div>
 
 </template>

@@ -1,5 +1,14 @@
 <template name="homeTemplate">
     <!-- check if user is logged in -->
-    <div class="outer"><button class="show-workouts">View workouts</button></div>
+    <div class="outer">
+    {{#if currentUser}}
+        <button class="logout">Logout</button> <br/>
+        <button class="show-workouts">View workouts for {{username}}</button>
+    {{else}}
+        {{> loginTemplate}}
+    {{/if}}
+
+
+    </div>
 
 </template>

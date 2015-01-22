@@ -36,7 +36,9 @@ function saveWorkout(fs){
             grips : ['half crimp','pinch','3FP'],
             sets : [sets1, sets2, sets3],
             resistance : [res1, res2, res3],
-            repMax : workoutToModify.repMax
+            repMax : workoutToModify.repMax,
+            owner: Meteor.userId(),
+            username: Meteor.user().username
           };
         Workouts.update(Session.get('selectedWorkout'), workout)
 }

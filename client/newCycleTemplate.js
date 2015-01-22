@@ -16,7 +16,7 @@ Template.newCycleStepTwoTemplate.events({
   'click .next': function () {
     Meteor.call('addWorkout', generateInitialWorkout(175), function(){
       //TODO use pub/sub to avoid excessive code duplication
-      Meteor.call('findWorkouts', {}, {sort: {sessionNumber: 1}}, function(err, result) {
+      Meteor.call('findWorkouts', {owner:Meteor.userId()}, {sort: {sessionNumber: 1}}, function(err, result) {
         if(typeof(err) !== 'undefined') {
           console.log(err);
         } else {
@@ -69,7 +69,9 @@ function newCycleDialog(fs){ // this can be tied to an event handler in another 
             grips : grips,
             sets : [0,0,0],
             resistance : [5,5,5],
-            repMax : [225, 255, 265]
+            repMax : [225, 255, 265],
+            owner: Meteor.userId(),
+            username: Meteor.user().username
           };
 
           Meteor.call('addWorkout', workout);

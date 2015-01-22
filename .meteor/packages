@@ -14,3 +14,5 @@ iron:router
 mike:mocha
 accounts-password
 accounts-base
+accounts-ui
+service-configuration
