@@ -1,0 +1,308 @@
+18:09:39.215 INFO - Launching a standalone server
+Setting system property webdriver.chrome.driver to selenium/chromedriver
+18:09:39.258 INFO - Java: Apple Inc. 20.65-b04-466.1
+18:09:39.258 INFO - OS: Mac OS X 10.10.1 x86_64
+18:09:39.270 INFO - v2.44.0, with Core v2.44.0. Built from revision 76d78cf
+18:09:39.331 INFO - Default driver org.openqa.selenium.ie.InternetExplorerDriver registration is skipped: registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match with current platform: MAC
+18:09:39.411 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+18:09:39.412 INFO - Version Jetty/5.1.x
+18:09:39.413 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+18:09:39.413 INFO - Started HttpContext[/selenium-server,/selenium-server]
+18:09:39.413 INFO - Started HttpContext[/,/]
+18:09:39.447 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@6ca084f8
+18:09:39.447 INFO - Started HttpContext[/wd,/wd]
+18:09:39.451 INFO - Started SocketListener on 0.0.0.0:4444
+18:09:39.452 INFO - Started org.openqa.jetty.jetty.Server@acfec48
+18:09:39.691 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Demo}]])
+18:09:39.703 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Demo}]
+18:09:41.991 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Demo}]]
+18:09:42.002 INFO - Executing: [get: http://www.google.com])
+18:09:44.207 INFO - Done: [get: http://www.google.com]
+18:09:44.221 INFO - Executing: [find element: By.selector: body])
+18:09:44.374 INFO - Done: [find element: By.selector: body]
+18:09:44.378 INFO - Executing: [is displayed: 0 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: body]])
+18:09:44.386 INFO - Done: [is displayed: 0 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: body]]
+18:09:44.390 INFO - Executing: [find element: By.selector: input[type=text]])
+18:09:44.397 INFO - Done: [find element: By.selector: input[type=text]]
+18:09:44.401 INFO - Executing: [send keys: 1 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: input[type=text]], [n, i, g, h, t, w, a, t, c, h]])
+18:09:44.491 INFO - Done: [send keys: 1 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: input[type=text]], [n, i, g, h, t, w, a, t, c, h]]
+18:09:44.496 INFO - Executing: [find element: By.selector: button[name=btnG]])
+18:09:44.503 INFO - Done: [find element: By.selector: button[name=btnG]]
+18:09:44.506 INFO - Executing: [is displayed: 2 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: button[name=btnG]]])
+18:09:44.518 INFO - Done: [is displayed: 2 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: button[name=btnG]]]
+18:09:44.522 INFO - Executing: [find element: By.selector: button[name=btnG]])
+18:09:44.537 INFO - Done: [find element: By.selector: button[name=btnG]]
+18:09:44.541 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: button[name=btnG]]])
+18:09:44.609 INFO - Done: [click: 2 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: button[name=btnG]]]
+18:09:45.621 INFO - Executing: [find element: By.selector: #main])
+18:09:45.807 INFO - Done: [find element: By.selector: #main]
+18:09:45.810 INFO - Executing: [get text: 3 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: #main]])
+18:09:48.063 INFO - Done: [get text: 3 [[FirefoxDriver: firefox on MAC (fafdf1de-652d-df4e-bcc8-74f3ea19ba80)] -> css selector: #main]]
+18:09:48.069 INFO - Executing: [delete session: cfb1bfb0-6f92-4400-b220-acd4ac0e7657])
+18:09:48.147 INFO - Done: [delete session: cfb1bfb0-6f92-4400-b220-acd4ac0e7657]
+18:09:49.165 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Leaderboard}]])
+18:09:49.166 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Leaderboard}]
+18:09:50.909 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Leaderboard}]]
+18:09:50.912 INFO - Executing: [get: http://localhost:3000/])
+18:09:51.708 INFO - Done: [get: http://localhost:3000/]
+18:09:51.713 INFO - Executing: [find element: By.selector: body])
+18:09:51.816 INFO - Done: [find element: By.selector: body]
+18:09:51.820 INFO - Executing: [is displayed: 0 [[FirefoxDriver: firefox on MAC (e95a772c-eab6-d94e-862e-7d98ad706e69)] -> css selector: body]])
+18:09:51.828 INFO - Done: [is displayed: 0 [[FirefoxDriver: firefox on MAC (e95a772c-eab6-d94e-862e-7d98ad706e69)] -> css selector: body]]
+18:09:51.832 INFO - Executing: [find element: By.selector: div.message])
+18:09:52.862 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+Command duration or timeout: 11 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Session ID: e95a772c-eab6-d94e-862e-7d98ad706e69
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=18.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:168)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9650)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582)
+18:09:52.866 WARN - Exception: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+18:09:53.624 INFO - Executing: [find element: By.selector: div.message])
+18:09:54.097 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+Command duration or timeout: 26 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Session ID: e95a772c-eab6-d94e-862e-7d98ad706e69
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=18.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:168)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9650)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582)
+18:09:54.100 WARN - Exception: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+18:09:54.837 INFO - Executing: [find element: By.selector: div.message])
+18:09:55.310 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+Command duration or timeout: 15 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Session ID: e95a772c-eab6-d94e-862e-7d98ad706e69
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=18.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:168)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9650)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582)
+18:09:55.312 WARN - Exception: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+18:09:56.043 INFO - Executing: [find element: By.selector: div.message])
+18:09:56.511 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+Command duration or timeout: 13 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Session ID: e95a772c-eab6-d94e-862e-7d98ad706e69
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=18.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:168)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9650)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582)
+18:09:56.513 WARN - Exception: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+18:09:57.234 INFO - Executing: [find element: By.selector: div.message])
+18:09:57.697 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Session ID: e95a772c-eab6-d94e-862e-7d98ad706e69
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=18.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:168)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9650)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous2579145183001081557webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582)
+18:09:57.699 WARN - Exception: Unable to locate element: {"method":"css selector","selector":"div.message"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
+Driver info: driver.version: unknown
+18:09:57.922 INFO - Executing: [delete session: 86f280e9-0508-430a-8733-a73d9e580829])
+18:09:57.998 INFO - Done: [delete session: 86f280e9-0508-430a-8733-a73d9e580829]

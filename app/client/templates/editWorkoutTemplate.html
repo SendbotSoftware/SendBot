@@ -1,0 +1,23 @@
+<template name="editWorkoutTemplate">
+   <div class="outer">
+      <form id="editWorkoutForm" data-parsley-validate>
+        Session Number : {{selectedWorkout.sessionNumber}} <br/>
+        Bodyweight : <input type="text" id="bodyWeight" data-parsley-range="[40,300]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
+        Type : {{type}}<br/>
+        Repititions : {{repetitions}}<br/>
+        Effort Rating : {{effortRating}}<br/>
+        {{grips.[0]}} sets: <input type="text" id="sets1" value="{{sets.[0]}}" data-parsley-range="[0,20]" data-parsley-type="digits" data-parsley-required="true"> <br/>
+        {{grips.[1]}} sets: <input type="text" id="sets2" value="{{sets.[1]}}" data-parsley-range="[0,20]" data-parsley-type="digits" data-parsley-required="true"> <br/>
+        {{grips.[2]}} sets: <input type="text" id="sets3" value="{{sets.[2]}}" data-parsley-range="[0,20]" data-parsley-type="digits" data-parsley-required="true"> <br/>
+        {{grips.[0]}} resistance: <input type="text" id="res1" value="{{resistance.[0]}}" data-parsley-range="[-75,100]" data-parsley-required="true"> <br/>
+        {{grips.[1]}} resistance: <input type="text" id="res2" value="{{resistance.[1]}}" data-parsley-range="[-75,100]" data-parsley-required="true"> <br/>
+        {{grips.[2]}} resistance: <input type="text" id="res3" value="{{resistance.[2]}}" data-parsley-range="[-75,100]" data-parsley-required="true">  <br/>
+        {{grips.[0]}} repMax: {{repMax.[0]}}<br/>
+        {{grips.[1]}} repMax: {{repMax.[1]}}<br/>
+        {{grips.[2]}} repMax: {{repMax.[2]}} <br/>
+
+      </form>
+      <button class="save">Save</button>
+
+  </div>
+</template>
