@@ -1,5 +1,5 @@
 module.exports = { 'testcase': function(browser) { 
-	browser.url("http://localhost:3000/workoutView")
+	browser.url("http://localhost:3000")
 	//.useCss()
 	.click("#new-cycle")
 	.setValue("#bodyWeight", "175")
@@ -16,15 +16,9 @@ module.exports = { 'testcase': function(browser) {
 	.click("div.outer")
 	.click("#start-set")
 	.click("#max-effort")
-	.click("#new-workout")
-	.setValue("#bodyWeight", "175")
-	.click("button.next")
-	.click("#start-set")
-	.click("#max-effort")
-	.click("#start-set")
-	.click("#max-effort")
-	.click("#start-set")
-	.click("#max-effort")
 	.assert.containsText("#repMax1", "267.13")
+	.click("button.delete")
+	.pause(300)
+	.click("button.btn.btn-primary")
 	.end();
 	}}

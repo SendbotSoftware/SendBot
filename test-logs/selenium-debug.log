@@ -1,173 +1,94 @@
-19:44:52.918 INFO - Launching a standalone server
+21:26:55.103 INFO - Launching a standalone server
 Setting system property webdriver.chrome.driver to selenium/chromedriver
-19:44:52.950 INFO - Java: Apple Inc. 20.65-b04-466.1
-19:44:52.950 INFO - OS: Mac OS X 10.10.1 x86_64
-19:44:52.959 INFO - v2.44.0, with Core v2.44.0. Built from revision 76d78cf
-19:44:53.025 INFO - Default driver org.openqa.selenium.ie.InternetExplorerDriver registration is skipped: registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match with current platform: MAC
-19:44:53.055 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-19:44:53.056 INFO - Version Jetty/5.1.x
-19:44:53.057 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
-19:44:53.057 INFO - Started HttpContext[/selenium-server,/selenium-server]
-19:44:53.057 INFO - Started HttpContext[/,/]
-19:44:53.094 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@335856a5
-19:44:53.094 INFO - Started HttpContext[/wd,/wd]
-19:44:53.099 INFO - Started SocketListener on 0.0.0.0:4444
-19:44:53.099 INFO - Started org.openqa.jetty.jetty.Server@35c0e45a
-19:44:53.280 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Testcase}]])
-19:44:53.291 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Testcase}]
-19:44:55.422 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Testcase}]]
-19:44:55.431 INFO - Executing: [get: http://localhost:3000/workoutView])
-19:44:56.207 INFO - Done: [get: http://localhost:3000/workoutView]
-19:44:56.221 INFO - Executing: [find element: By.selector: #new-cycle])
-19:44:56.354 INFO - Done: [find element: By.selector: #new-cycle]
-19:44:56.359 INFO - Executing: [click: 0 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #new-cycle]])
-19:44:56.912 INFO - Done: [click: 0 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #new-cycle]]
-19:44:56.916 INFO - Executing: [find element: By.selector: #bodyWeight])
-19:44:56.946 INFO - Done: [find element: By.selector: #bodyWeight]
-19:44:56.951 INFO - Executing: [send keys: 1 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #bodyWeight], [1, 7, 5]])
-19:44:57.049 INFO - Done: [send keys: 1 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #bodyWeight], [1, 7, 5]]
-19:44:57.053 INFO - Executing: [find element: By.selector: #next])
-19:44:57.071 INFO - Done: [find element: By.selector: #next]
-19:44:57.073 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #next]])
-19:44:57.167 INFO - Done: [click: 2 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #next]]
-19:44:57.171 INFO - Executing: [find element: By.selector: #next])
-19:44:57.188 INFO - Done: [find element: By.selector: #next]
-19:44:57.191 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #next]])
-19:44:57.282 INFO - Done: [click: 2 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #next]]
-19:44:57.286 INFO - Executing: [find element: By.selector: #hangTimeOne])
-19:44:57.299 INFO - Done: [find element: By.selector: #hangTimeOne]
-19:44:57.302 INFO - Executing: [send keys: 3 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #hangTimeOne], [2, 0]])
-19:44:57.346 INFO - Done: [send keys: 3 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #hangTimeOne], [2, 0]]
-19:44:57.351 INFO - Executing: [find element: By.selector: #hangTimeTwo])
-19:44:57.370 INFO - Done: [find element: By.selector: #hangTimeTwo]
-19:44:57.374 INFO - Executing: [send keys: 4 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #hangTimeTwo], [2, 0]])
-19:44:57.405 INFO - Done: [send keys: 4 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #hangTimeTwo], [2, 0]]
-19:44:57.409 INFO - Executing: [find element: By.selector: #hangTimeThree])
-19:44:57.418 INFO - Done: [find element: By.selector: #hangTimeThree]
-19:44:57.421 INFO - Executing: [send keys: 5 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #hangTimeThree], [2, 0]])
-19:44:57.473 INFO - Done: [send keys: 5 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #hangTimeThree], [2, 0]]
-19:44:57.478 INFO - Executing: [find element: By.selector: #submit])
-19:44:57.485 INFO - Done: [find element: By.selector: #submit]
-19:44:57.489 INFO - Executing: [click: 6 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #submit]])
-19:44:57.590 INFO - Done: [click: 6 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #submit]]
-19:44:57.594 INFO - Executing: [find element: By.selector: #start-set])
-19:44:57.602 INFO - Done: [find element: By.selector: #start-set]
-19:44:57.605 INFO - Executing: [click: 7 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]])
-19:44:57.685 INFO - Done: [click: 7 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]]
-19:44:57.690 INFO - Executing: [find element: By.selector: #max-effort])
-19:44:57.704 INFO - Done: [find element: By.selector: #max-effort]
-19:44:57.708 INFO - Executing: [click: 8 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]])
-19:44:57.801 INFO - Done: [click: 8 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]]
-19:44:57.805 INFO - Executing: [find element: By.selector: #start-set])
-19:44:57.840 INFO - Done: [find element: By.selector: #start-set]
-19:44:57.843 INFO - Executing: [click: 9 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]])
-19:44:57.968 INFO - Done: [click: 9 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]]
-19:44:57.972 INFO - Executing: [find element: By.selector: #max-effort])
-19:44:57.979 INFO - Done: [find element: By.selector: #max-effort]
-19:44:57.982 INFO - Executing: [click: 10 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]])
-19:44:58.067 INFO - Done: [click: 10 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]]
-19:44:58.070 INFO - Executing: [find element: By.selector: div.outer])
-19:44:58.086 INFO - Done: [find element: By.selector: div.outer]
-19:44:58.089 INFO - Executing: [click: 11 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: div.outer]])
-19:44:58.149 INFO - Done: [click: 11 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: div.outer]]
-19:44:58.152 INFO - Executing: [find element: By.selector: #start-set])
-19:44:58.161 INFO - Done: [find element: By.selector: #start-set]
-19:44:58.164 INFO - Executing: [click: 12 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]])
-19:44:58.222 INFO - Done: [click: 12 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]]
-19:44:58.225 INFO - Executing: [find element: By.selector: #max-effort])
-19:44:58.231 INFO - Done: [find element: By.selector: #max-effort]
-19:44:58.234 INFO - Executing: [click: 13 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]])
-19:44:58.337 INFO - Done: [click: 13 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]]
-19:44:58.340 INFO - Executing: [find element: By.selector: #new-workout])
-19:44:58.354 INFO - Done: [find element: By.selector: #new-workout]
-19:44:58.357 INFO - Executing: [click: 14 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #new-workout]])
-19:44:58.417 INFO - Done: [click: 14 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #new-workout]]
-19:44:58.421 INFO - Executing: [find element: By.selector: #bodyWeight])
-19:44:58.437 INFO - Done: [find element: By.selector: #bodyWeight]
-19:44:58.441 INFO - Executing: [send keys: 15 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #bodyWeight], [1, 7, 5]])
-19:44:58.463 INFO - Done: [send keys: 15 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #bodyWeight], [1, 7, 5]]
-19:44:58.466 INFO - Executing: [find element: By.selector: button.next])
-19:44:58.540 INFO - Done: [find element: By.selector: button.next]
-19:44:58.543 INFO - Executing: [click: 16 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: button.next]])
-19:44:58.636 INFO - Done: [click: 16 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: button.next]]
-19:44:58.639 INFO - Executing: [find element: By.selector: #start-set])
-19:44:58.656 INFO - Done: [find element: By.selector: #start-set]
-19:44:58.659 INFO - Executing: [click: 17 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]])
-19:44:58.725 INFO - Done: [click: 17 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]]
-19:44:58.728 INFO - Executing: [find element: By.selector: #max-effort])
-19:44:58.741 INFO - Done: [find element: By.selector: #max-effort]
-19:44:58.743 INFO - Executing: [click: 18 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]])
-19:44:58.834 INFO - Done: [click: 18 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]]
-19:44:58.837 INFO - Executing: [find element: By.selector: #start-set])
-19:44:58.843 INFO - Done: [find element: By.selector: #start-set]
-19:44:58.845 INFO - Executing: [click: 19 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]])
-19:44:58.906 INFO - Done: [click: 19 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]]
-19:44:58.909 INFO - Executing: [find element: By.selector: #max-effort])
-19:44:58.925 INFO - Done: [find element: By.selector: #max-effort]
-19:44:58.928 INFO - Executing: [click: 20 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]])
-19:44:59.019 INFO - Done: [click: 20 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]]
-19:44:59.022 INFO - Executing: [find element: By.selector: #start-set])
-19:44:59.030 INFO - Done: [find element: By.selector: #start-set]
-19:44:59.033 INFO - Executing: [click: 21 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]])
-19:44:59.087 INFO - Done: [click: 21 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #start-set]]
-19:44:59.090 INFO - Executing: [find element: By.selector: #max-effort])
-19:44:59.098 INFO - Done: [find element: By.selector: #max-effort]
-19:44:59.101 INFO - Executing: [click: 22 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]])
-19:44:59.209 INFO - Done: [click: 22 [[FirefoxDriver: firefox on MAC (4ee7656e-2a10-4344-a634-97a85745e721)] -> css selector: #max-effort]]
-19:44:59.214 INFO - Executing: [find element: By.selector: (//td[@id='repMax1'])[2]])
-19:45:00.065 WARN - Exception thrown
-org.openqa.selenium.InvalidSelectorException: The given selector (//td[@id='repMax1'])[2] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
-Command duration or timeout: 9 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
-Session ID: 4ee7656e-2a10-4344-a634-97a85745e721
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=18.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:168)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
-	at java.lang.Thread.run(Thread.java:695)
-Caused by: org.openqa.selenium.InvalidSelectorException: The given selector (//td[@id='repMax1'])[2] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.annotateInvalidSelectorError_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous8404454715616936912webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9615)
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous8404454715616936912webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9646)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous8404454715616936912webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9650)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous8404454715616936912webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous8404454715616936912webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///var/folders/k3/p_bsby8j2xb34c0fbqf03lrh0000gn/T/anonymous8404454715616936912webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582)
-19:45:00.068 WARN - Exception: The given selector (//td[@id='repMax1'])[2] is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
-System info: host: 'MacBook-Pro.home', ip: '192.168.1.5', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.1', java.version: '1.6.0_65'
-Driver info: driver.version: unknown
-19:45:00.299 INFO - Executing: [delete session: 2dcdff5f-fd60-4fe5-bc62-b402c8071eef])
-19:45:00.377 INFO - Done: [delete session: 2dcdff5f-fd60-4fe5-bc62-b402c8071eef]
-19:45:00.387 INFO - Shutting down...
+21:26:55.133 INFO - Java: Apple Inc. 20.65-b04-466.1
+21:26:55.133 INFO - OS: Mac OS X 10.10.1 x86_64
+21:26:55.141 INFO - v2.44.0, with Core v2.44.0. Built from revision 76d78cf
+21:26:55.181 INFO - Default driver org.openqa.selenium.ie.InternetExplorerDriver registration is skipped: registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match with current platform: MAC
+21:26:55.235 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+21:26:55.235 INFO - Version Jetty/5.1.x
+21:26:55.236 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+21:26:55.236 INFO - Started HttpContext[/selenium-server,/selenium-server]
+21:26:55.237 INFO - Started HttpContext[/,/]
+21:26:55.270 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@6ca084f8
+21:26:55.270 INFO - Started HttpContext[/wd,/wd]
+21:26:55.276 INFO - Started SocketListener on 0.0.0.0:4444
+21:26:55.276 INFO - Started org.openqa.jetty.jetty.Server@acfec48
+21:26:55.453 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Testcase}]])
+21:26:55.462 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Testcase}]
+21:26:57.677 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, name=Testcase}]]
+21:26:57.685 INFO - Executing: [get: http://localhost:3000])
+21:26:58.433 INFO - Done: [get: http://localhost:3000]
+21:26:58.446 INFO - Executing: [find element: By.selector: #new-cycle])
+21:26:58.597 INFO - Done: [find element: By.selector: #new-cycle]
+21:26:58.601 INFO - Executing: [click: 0 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #new-cycle]])
+21:26:59.130 INFO - Done: [click: 0 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #new-cycle]]
+21:26:59.135 INFO - Executing: [find element: By.selector: #bodyWeight])
+21:26:59.162 INFO - Done: [find element: By.selector: #bodyWeight]
+21:26:59.166 INFO - Executing: [send keys: 1 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #bodyWeight], [1, 7, 5]])
+21:26:59.256 INFO - Done: [send keys: 1 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #bodyWeight], [1, 7, 5]]
+21:26:59.259 INFO - Executing: [find element: By.selector: #next])
+21:26:59.284 INFO - Done: [find element: By.selector: #next]
+21:26:59.287 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #next]])
+21:26:59.371 INFO - Done: [click: 2 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #next]]
+21:26:59.374 INFO - Executing: [find element: By.selector: #next])
+21:26:59.389 INFO - Done: [find element: By.selector: #next]
+21:26:59.392 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #next]])
+21:26:59.485 INFO - Done: [click: 2 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #next]]
+21:26:59.488 INFO - Executing: [find element: By.selector: #hangTimeOne])
+21:26:59.503 INFO - Done: [find element: By.selector: #hangTimeOne]
+21:26:59.506 INFO - Executing: [send keys: 3 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #hangTimeOne], [2, 0]])
+21:26:59.550 INFO - Done: [send keys: 3 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #hangTimeOne], [2, 0]]
+21:26:59.554 INFO - Executing: [find element: By.selector: #hangTimeTwo])
+21:26:59.573 INFO - Done: [find element: By.selector: #hangTimeTwo]
+21:26:59.577 INFO - Executing: [send keys: 4 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #hangTimeTwo], [2, 0]])
+21:26:59.608 INFO - Done: [send keys: 4 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #hangTimeTwo], [2, 0]]
+21:26:59.612 INFO - Executing: [find element: By.selector: #hangTimeThree])
+21:26:59.621 INFO - Done: [find element: By.selector: #hangTimeThree]
+21:26:59.625 INFO - Executing: [send keys: 5 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #hangTimeThree], [2, 0]])
+21:26:59.672 INFO - Done: [send keys: 5 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #hangTimeThree], [2, 0]]
+21:26:59.676 INFO - Executing: [find element: By.selector: #submit])
+21:26:59.687 INFO - Done: [find element: By.selector: #submit]
+21:26:59.691 INFO - Executing: [click: 6 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #submit]])
+21:26:59.794 INFO - Done: [click: 6 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #submit]]
+21:26:59.799 INFO - Executing: [find element: By.selector: #start-set])
+21:26:59.807 INFO - Done: [find element: By.selector: #start-set]
+21:26:59.810 INFO - Executing: [click: 7 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #start-set]])
+21:26:59.871 INFO - Done: [click: 7 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #start-set]]
+21:26:59.875 INFO - Executing: [find element: By.selector: #max-effort])
+21:26:59.886 INFO - Done: [find element: By.selector: #max-effort]
+21:26:59.890 INFO - Executing: [click: 8 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #max-effort]])
+21:26:59.950 INFO - Done: [click: 8 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #max-effort]]
+21:26:59.953 INFO - Executing: [find element: By.selector: #start-set])
+21:27:00.004 INFO - Done: [find element: By.selector: #start-set]
+21:27:00.007 INFO - Executing: [click: 9 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #start-set]])
+21:27:00.129 INFO - Done: [click: 9 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #start-set]]
+21:27:00.133 INFO - Executing: [find element: By.selector: #max-effort])
+21:27:00.142 INFO - Done: [find element: By.selector: #max-effort]
+21:27:00.144 INFO - Executing: [click: 10 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #max-effort]])
+21:27:00.204 INFO - Done: [click: 10 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #max-effort]]
+21:27:00.208 INFO - Executing: [find element: By.selector: div.outer])
+21:27:00.222 INFO - Done: [find element: By.selector: div.outer]
+21:27:00.224 INFO - Executing: [click: 11 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: div.outer]])
+21:27:00.283 INFO - Done: [click: 11 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: div.outer]]
+21:27:00.286 INFO - Executing: [find element: By.selector: #start-set])
+21:27:00.293 INFO - Done: [find element: By.selector: #start-set]
+21:27:00.295 INFO - Executing: [click: 12 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #start-set]])
+21:27:00.372 INFO - Done: [click: 12 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #start-set]]
+21:27:00.376 INFO - Executing: [find element: By.selector: #max-effort])
+21:27:00.391 INFO - Done: [find element: By.selector: #max-effort]
+21:27:00.394 INFO - Executing: [click: 13 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #max-effort]])
+21:27:00.487 INFO - Done: [click: 13 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #max-effort]]
+21:27:00.492 INFO - Executing: [find element: By.selector: #repMax1])
+21:27:00.507 INFO - Done: [find element: By.selector: #repMax1]
+21:27:00.510 INFO - Executing: [get text: 14 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #repMax1]])
+21:27:00.526 INFO - Done: [get text: 14 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: #repMax1]]
+21:27:00.529 INFO - Executing: [find element: By.selector: button.delete])
+21:27:00.540 INFO - Done: [find element: By.selector: button.delete]
+21:27:00.543 INFO - Executing: [click: 15 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: button.delete]])
+21:27:00.599 INFO - Done: [click: 15 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: button.delete]]
+21:27:00.906 INFO - Executing: [find element: By.selector: button.btn.btn-primary])
+21:27:00.937 INFO - Done: [find element: By.selector: button.btn.btn-primary]
+21:27:00.940 INFO - Executing: [click: 16 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: button.btn.btn-primary]])
+21:27:01.037 INFO - Done: [click: 16 [[FirefoxDriver: firefox on MAC (ee7190f2-5885-b747-b346-6d4430ea42d3)] -> css selector: button.btn.btn-primary]]
+21:27:01.040 INFO - Executing: [delete session: f16c5c72-3210-4415-a611-61c07d679833])
+21:27:01.166 INFO - Done: [delete session: f16c5c72-3210-4415-a611-61c07d679833]

@@ -10,7 +10,7 @@ Template.homeTemplate.events({
    Router.go('newWorkout');
   },
  'click #new-cycle': function () {
-   Router.go('newCycleStepOne');
+   Router.go('newCycle');
   },
 });
 

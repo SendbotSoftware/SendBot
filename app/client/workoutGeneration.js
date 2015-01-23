@@ -9,9 +9,9 @@ generateWorkout = function(userEnteredBodyweight){
     var workoutType = WORKOUT_TYPE.VOLUME,
     repetitions = calculate_reps(workoutType),
     effortRating = calculate_rpe().toString(),
-    resistance = [Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[0]+wt_increase()))/100,
-                  Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[1]+wt_increase()))/100,
-                  Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[2]+wt_increase()))/100],
+    resistance = [Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[0]+weight_increase()))/100,
+                  Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[1]+weight_increase()))/100,
+                  Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[2]+weight_increase()))/100],
     repMax = [Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[0])).toString())/100,
               Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[1])).toString())/100,
               Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[2])).toString())/100];
@@ -35,15 +35,30 @@ generateWorkout = function(userEnteredBodyweight){
 
 
 
+timeToOneRM = function(hangTimes,load){
+  load = +load;
+  rmOne = round((3.5*Math.log(hangTimes[0])*load/7+5),2);     
+  rmTwo = round(3.5*Math.log(hangTimes[1])*load/7+5,2); 
+  rmThree = round(3.5*Math.log(hangTimes[2])*load/7+5,2); 
+  return [+rmOne,+rmTwo,+rmThree];
+};
+
+round = function(value, decimals) {
+    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+};
+
+getCycleNumber = function (){
+  return 1;
+};
 
 
 //calculate RPE number based upon workout type and reps
-function calculate_rpe(wo_type, reps) {
+calculate_rpe = function(wo_type, reps) {
     return EFFORT.HIGH;
 };
 
 //calculate workout Reps based upon workout type
-function calculate_reps(wo_type) {
+calculate_reps = function(wo_type) {
 
      if (wo_type == WORKOUT_TYPE.VOLUME) {
           return (Math.floor(Math.random() * 4) + 3);
@@ -53,7 +68,7 @@ function calculate_reps(wo_type) {
 };
 
 //caclulate current date
-function getDate() {
+getDate = function() {
     var date = new Date(),
         month = date.getMonth() + 1,
         day = date.getDate(),
@@ -62,7 +77,7 @@ function getDate() {
 };
 
 //find right resistance for given rpe, reps
-function calculate_resistance(reps, rpe, weight, one_rep_max) {
+calculate_resistance = function(reps, rpe, weight, one_rep_max) {
 
     var res_min = -100;
     var res_max =  100;
@@ -96,12 +111,12 @@ function calculate_resistance(reps, rpe, weight, one_rep_max) {
 };
 
 //calculate weight increase from previous sesion.
-function wt_increase() {
+weight_increase = function() {
     return 2;
 };
 
 //calculate 1rm
-function calculate_1rm(reps, rpe, weight) {
+calculate_1rm = function(reps, rpe, weight) {
     var array = [
         [62, 66, 71, 74, 77, 80, 85, 90, 95, 100],
         [60, 64, 68, 71, 74, 77, 80, 85, 90, 95],

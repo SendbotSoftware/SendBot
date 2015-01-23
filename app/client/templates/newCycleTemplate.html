@@ -1,5 +1,5 @@
 
-<template name="newCycleStepOneTemplate">
+<template name="newCycleTemplate">
 <div class="outer">
  <form id="demo-form" data-parsley-validate>
    <div class="first block1 show"> 
@@ -24,36 +24,3 @@
 </div>
 </template>
 
-<template name="newCycleStepTwoTemplate">
-<div class="outer">
- 
-  </div>
-</template>
-
-
-
-<!-- 
-<script type="text/javascript">
-$(document).ready(function () {
-  $('.next').on('click', function () {
-    var current = $(this).data('currentBlock'),
-      next = $(this).data('nextBlock');
-
-    // only validate going forward. If current group is invalid, do not go further
-    // .parsley().validate() returns validation result AND show errors
-    if (next > current)
-      if (false === $('#demo-form').parsley().validate('block' + current))
-        return;
-
-    // validation was ok. We can go on next step.
-    $('.block' + current)
-      .removeClass('show')
-      .addClass('hidden');
-
-    $('.block' + next)
-      .removeClass('hidden')
-      .addClass('show');
-
-  });
-});
-</script> -->

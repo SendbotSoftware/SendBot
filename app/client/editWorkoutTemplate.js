@@ -2,9 +2,7 @@
 
 Template.editWorkoutTemplate.events({
   'click .save': function () {
-    if (saveWorkout()){
-    Router.go('home');
-    }; 
+      saveWorkout();
   },
 });
 
@@ -13,7 +11,6 @@ Template.editWorkoutTemplate.helpers({
 });
 
 Template.editWorkoutTemplate.rendered = function () {
-
   $('#editWorkoutForm').parsley({trigger: 'change'});
 }
 
@@ -22,41 +19,34 @@ Template.editWorkoutTemplate.rendered = function () {
 
 function saveWorkout(fs){ 
 
-          if ($('#editWorkoutForm').parsley().validate()== true){      
-          var bodyWeight = $('#bodyWeight').val();
-          var res1 = $('#res1').val();
-          var res2 = $('#res2').val();
-          var res3 = $('#res3').val();
-          var sets1 = $('#sets1').val();
-          var sets2 = $('#sets2').val();
-          var sets3 = $('#sets3').val();
+      if ($('#editWorkoutForm').parsley().validate()== true){   
+          workout = Workouts.findOne(Session.get('selectedWorkout'));
 
-          var workoutToModify = Workouts.findOne(Session.get('selectedWorkout'));
+          var bodyweight = $('#bodyWeight').val(),
+              res1 = $('#res1').val(),
+              res2 = $('#res2').val(),
+              res3 = $('#res3').val(),
+              sets1 = $('#sets1').val(),
+              sets2 = $('#sets2').val(),
+              sets3 = $('#sets3').val(),
+              repMax1 = calculate_1rm(workout.repetitions,workout.effortRating,+bodyweight+(+(res1))),
+              repMax2 = calculate_1rm(workout.repetitions,workout.effortRating,+bodyweight+(+res2)),
+              repMax3 = calculate_1rm(workout.reptitions,workout.effortRating,+bodyweight+(+res3));
 
-          var workout = {
-            cycleNumber: 1,
-            sessionNumber: workoutToModify.sessionNumber,
-            date : workoutToModify.date,
-            type : workoutToModify.type,
-            repetitions : workoutToModify.repetitions,
-            bodyWeight : bodyWeight,
-            effortRating : workoutToModify.effortRating,
-            grips : ['half crimp','pinch','3FP'],
-            sets : [sets1, sets2, sets3],
-            resistance : [res1, res2, res3],
-            repMax : workoutToModify.repMax
-          };
-          Workouts.update(Session.get('selectedWorkout'),workout);
-
-          return true;
-        }else {
+          Workouts.update({
+            _id: Session.get('selectedWorkout')
+          }, {
+            $set: {bodyWeight:bodyweight,
+                   sets:[sets1, sets2, sets3],
+                   resistance:[res1, res2, res3],
+                   repMax: [repMax1,repMax2,repMax3] }
+          });
+          Router.go('workoutView');
+      }else {
           return false;
-        }
+      }
 }
 
-function checkWorkout(){
-
-}
 
 
 

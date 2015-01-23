@@ -12,12 +12,8 @@ Router.map(function () {
         path: '/',
         template: 'homeTemplate',
     });
-    this.route('newCycleStepOne', {
-        template: 'newCycleStepOneTemplate',
-    });
-
-    this.route('newCycleStepTwo', {
-        template: 'newCycleStepTwoTemplate',
+    this.route('newCycle', {
+        template: 'newCycleTemplate',
     });
     this.route('editWorkout', {
         template: 'editWorkoutTemplate',
@@ -30,15 +26,8 @@ Router.map(function () {
         template: 'workoutViewTemplate',
         data : function () {return Workouts.findOne({sessionNumber: Workouts.find().count()})}
     });
-    this.route('workoutInProgress', {
-        template: 'workoutInProgressTemplate',
-        data : function () {return Workouts.findOne({sessionNumber: Workouts.find().count()})}
-    });
     this.route('timer', {
         template: 'timerTemplate',
-    });
-    this.route('setData', {
-        template: 'setDataTemplate',
     });
     this.route('set', {
         template: 'setTemplate',
@@ -47,7 +36,6 @@ Router.map(function () {
             currentRes: function () {return Workouts.findOne({sessionNumber: Workouts.find().count()}).resistance[GRIP_COUNTER]}
         }
     });
-    
 
 });
 

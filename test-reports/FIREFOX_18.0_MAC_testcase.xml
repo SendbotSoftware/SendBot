@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites name="testcase"
-             errors="1"
-             failures="1"
-             tests="2">
+             errors="0"
+             failures="0"
+             tests="1">
   
-  <testsuite errors="1" failures="1" hostname="" id=""
-    name="testcase" package="testcase" skipped="1"
-    tests="2" time="" timestamp="">
+  <testsuite errors="0" failures="0" hostname="" id=""
+    name="testcase" package="testcase" skipped="0"
+    tests="1" time="" timestamp="">
     
     
-      <testcase name="Testing if element &lt;(//td[@id=&#39;repMax1&#39;])[2]&gt; contains text: &quot;267.13&quot;. Element could not be located.">
-        
-          <failure message="Expected &quot;267.13&quot; but got: &quot;null&quot;"></failure>
+      <testcase name="Testing if element &lt;#repMax1&gt; contains text: &quot;267.13&quot;.">
         
         
       </testcase>
     
-    
-      <system-err>
-        Unable to locate element: &quot;(//td[@id=&#39;repMax1&#39;])[2]&quot; using: css selector
-      </system-err>
     
     </testsuite>
   

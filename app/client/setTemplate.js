@@ -13,13 +13,17 @@ Template.setTemplate.events({
 Template.setTemplate.rendered = function() {
     if(!this._rendered) {
           this._rendered = true;
-          restTimer(180);
-      
+          setRestTimer(180);    
     }
 }
 
 var clock, interval, timeLeft;
 clock = 0;
+
+setRestTimer = function(lengthOfRest){
+    interval = Meteor.setInterval(timeLeft, 50);
+    clock = lengthOfRest;
+};
 
 timeLeft = function() {
   if (clock > 0) {
@@ -28,22 +32,16 @@ timeLeft = function() {
     return;
   }
   else  {
-        Meteor.clearInterval(interval);
+    Meteor.clearInterval(interval);
   }
 };
 
 if (Meteor.isClient) {
     Template.setTemplate.minutes= function() {
-        return ~~(Session.get("time")/60);
+      return ~~(Session.get("time")/60);
     };
-
-        Template.setTemplate.seconds = function() {
+    Template.setTemplate.seconds = function() {
         return (Session.get("time")%60);
     };
-
 }
 
-restTimer = function(length){
-    interval = Meteor.setInterval(timeLeft, 50);
-    clock = length;
-};

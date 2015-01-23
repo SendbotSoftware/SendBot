@@ -18,7 +18,7 @@ Template.workoutViewTemplate.events({
   },
 
   'click #new-cycle': function () {
-    Router.go('newCycleStepOne');
+    Router.go('newCycle');
   }
 });
 
