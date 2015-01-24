@@ -1,6 +1,3 @@
-//ENUMERATION DEFINITIONS
-
-
 
 Router.configure({
     loadingTemplate: 'loading',

@@ -1,3 +1,7 @@
+
+// runs test case by opening browser adding new cycle, running workout
+// then checking the value that is contained in the database when finished
+// it deltes the workout and restores the app back to its previous state
 module.exports = { 'testcase': function(browser) { 
 	browser.url("http://localhost:3000")
 	//.useCss()
@@ -21,4 +25,4 @@ module.exports = { 'testcase': function(browser) {
 	.pause(300)
 	.click("button.btn.btn-primary")
 	.end();
-	}}
+}}

@@ -1,7 +1,9 @@
+// gets last workout from mongo db 
 getLastWorkout = function(){
     return Workouts.findOne({sessionNumber: Workouts.find().count()});
 };
 
+// generates new workout with user entered bodyweight
 generateWorkout = function(userEnteredBodyweight){
 
     //get lastworkout from collection and build new workout variables
@@ -33,8 +35,8 @@ generateWorkout = function(userEnteredBodyweight){
     return workout;
 };
 
-
-
+// calculates one repetition max based upon max hang time
+// and bodyweight of user, VERY ROUGH FOR NOW
 timeToOneRM = function(hangTimes,load){
   load = +load;
   rmOne = round((3.5*Math.log(hangTimes[0])*load/7+5),2);     
@@ -43,10 +45,15 @@ timeToOneRM = function(hangTimes,load){
   return [+rmOne,+rmTwo,+rmThree];
 };
 
+// a simple rounding function to truncate values to nice 
+// usuable lengths
 round = function(value, decimals) {
     return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 };
 
+// generates cycle number that can be used in the future
+// to differeniate macro cycles for user, returns 1 for fow
+// as place holder value
 getCycleNumber = function (){
   return 1;
 };
