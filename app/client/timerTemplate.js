@@ -1,55 +1,93 @@
+var clock, interval, timeLeft,reps, rest_flag;
+
 Template.timerTemplate.helpers({
 
 });
 
 Template.timerTemplate.events({
-     'click #high-effort': function () {
-        SET_COUNTER = SET_COUNTER + 1;
-         Router.go('timer');
+    'click #high-effort': function () {
+        processSetData();
     },
     'click #max-effort': function () {
-        saveSetData();
-        SET_COUNTER = 0;
-        GRIP_COUNTER = GRIP_COUNTER+1;
-        if(GRIP_COUNTER<3){
-            Meteor.clearInterval(interval);
-            Router.go('set');
-        }else{
-            GRIP_COUNTER = 0;
-            Meteor.clearInterval(interval);
-            
-            Router.go('workoutView');
-        }
+        processGripData();
     }
 
 });
 
+// called on template render, intializes variables and
+// calls timer function
 Template.timerTemplate.rendered = function() {
+
+    rest_flag = false;
+    reps = 0;
+    clock = 8;
+
+    reps = Workouts.findOne({sessionNumber: Workouts.find().count()}).repetitions;
+
     if(!this._rendered) {
-          this._rendered = true;
-          setTimer(3);
-      
+        this._rendered = true;
+        setupTimer(reps);  
     }
 }
 
-saveSetData = function(){
+// helper methods to get timer and rep data for view
+if (Meteor.isClient) {
+    Template.timerTemplate.time = function() {
+        return Session.get("time");
+    };
+        Template.timerTemplate.reps = function(){
+        return Session.get("rep");
+    };
+
+}
+
+
+// go to timer after incrementing the counter of sets that user has performed
+// for given grip, effort level is recoreded as well
+goToTimer = function(){
+    SET_COUNTER = SET_COUNTER + 1;
+    Router.go('timer');
+};
+
+// process the cumalative set data after the user has clicked the max effort 
+// button, meaning that their work on this grip is done for the day
+processGripData = function(){
+
+    // get the database record from the data base and find the correct entry in
+    // the sets array
     currentWorkout = Workouts.findOne({sessionNumber: Workouts.find().count()});
     sets = currentWorkout.sets;
     sets[GRIP_COUNTER] = SET_COUNTER+1;
 
+    // set the proper value in the workout document
     Workouts.update({
         _id: currentWorkout._id
     }, {
         $set: {sets:sets}
     });
-};
 
-var clock, interval, timeLeft,reps, rest_flag;
-rest_flag = false;
-reps = 0;
-clock = 8;
+    // reset the set counter, and increment the grip counter
+    SET_COUNTER = 0;
+    GRIP_COUNTER = GRIP_COUNTER+1;
 
-timeLeft = function() {
+    // if the grip counter is less then three, continue the workout,
+    // if the grip counter is equal to 3, clear working variables and
+    // proceed to viewing workouts
+    if(GRIP_COUNTER<3){
+        Meteor.clearInterval(interval);
+        Router.go('set');
+    }else{
+        GRIP_COUNTER = 0;
+        Meteor.clearInterval(interval);
+        Router.go('workoutView');
+    }
+
+}
+
+// the timer used to time the sets, assumes fixed work/rest periods of 
+// 7 seconds on, 3 seconds off, uses global variable reps and rest flag
+// to process states
+intervalTimer = function() {
   if (clock > 0) {
     clock--;
     Session.set("time", clock);
@@ -71,22 +109,8 @@ timeLeft = function() {
   }
 };
 
-if (Meteor.isClient) {
-    Template.timerTemplate.time = function() {
-        return Session.get("time");
-    };
-
-}
-
-if (Meteor.isClient) {
-    Template.timerTemplate.reps = function(){
-        return Session.get("rep");
-    };
-}
-
-
-
-setTimer = function(input_reps){
-    interval = Meteor.setInterval(timeLeft, 1);
+// sets up the interval timer (intervalTimer)
+setupTimer = function(input_reps){
+    interval = Meteor.setInterval(intervalTimer, 1);
     reps = input_reps;
 };
