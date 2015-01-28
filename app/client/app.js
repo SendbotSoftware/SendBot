@@ -33,6 +33,7 @@ Router.map(function () {
             currentRes: function () {return getLastWorkout().resistance[GRIP_COUNTER]}
         }
     });
+    
 
 });
 

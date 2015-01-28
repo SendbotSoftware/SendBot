@@ -9,6 +9,16 @@ generateWorkout = function(userEnteredBodyweight){
 
     //get lastworkout from collection and build new workout variables
     var lastWorkout = getLastWorkout();
+
+    if(lastWorkout.cycleType = CYCLE_TYPE.ADVANCED){
+
+    }else if(lastWorkout.cycleType = CYCLE_TYPE.INTERMEDIATE){
+
+    }
+    else if(lastWorkout.cycleType = CYCLE_TYPE.NOVICE){
+
+    }
+
     var workoutType = WORKOUT_TYPE.VOLUME,
     repetitions = calculate_reps(workoutType),
     effortRating = calculate_rpe().toString(),

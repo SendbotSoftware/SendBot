@@ -50,11 +50,11 @@ function processNewCycleData(fs){
               hangTimeThree = $('#hangTimeThree').val();
               
               if($('#cycleA').is(':checked')){
-                var cycleType = 'advanced';
+                var cycleType = CYCLE_TYPE.ADVANCED;
               }else if($('#cycleI').is(':checked')){
-                var cycleType = 'intermediete';
+                var cycleType = CYCLE_TYPE.INTERMEDIATE;
               }else if($('#cycleN').is(':checked')){
-                var cycleType = 'novice';
+                var cycleType = CYCLE_TYPE.NOVICE;
               }
 
               var cycleNumber = (getLargestCycleNumber()+1),
