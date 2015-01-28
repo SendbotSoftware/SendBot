@@ -5,7 +5,7 @@ Template.newWorkoutTemplate.helpers({
 
 Template.newWorkoutTemplate.events({
   'click .next': function () {
-    
+    newWorkout();
   },
 });
 

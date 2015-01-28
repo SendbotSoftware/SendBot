@@ -29,8 +29,8 @@ Router.map(function () {
     this.route('set', {
         template: 'setTemplate',
         data : {
-            currentGrip:  function () {return Workouts.findOne({sessionNumber: Workouts.find().count()}).grips[GRIP_COUNTER]},
-            currentRes: function () {return Workouts.findOne({sessionNumber: Workouts.find().count()}).resistance[GRIP_COUNTER]}
+            currentGrip:  function () {return getLastWorkout().grips[GRIP_COUNTER]},
+            currentRes: function () {return getLastWorkout().resistance[GRIP_COUNTER]}
         }
     });
 

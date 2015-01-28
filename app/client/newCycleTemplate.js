@@ -48,8 +48,16 @@ function processNewCycleData(fs){
               hangTimeOne = $('#hangTimeOne').val(),
               hangTimeTwo = $('#hangTimeTwo').val(),
               hangTimeThree = $('#hangTimeThree').val();
+              
+              if($('#cycleA').is(':checked')){
+                var cycleType = 'advanced';
+              }else if($('#cycleI').is(':checked')){
+                var cycleType = 'intermediete';
+              }else if($('#cycleN').is(':checked')){
+                var cycleType = 'novice';
+              }
 
-              var cycleNumber =1,
+              var cycleNumber = (getLargestCycleNumber()+1),
                 sessionNumber = 1,
                 date = getDate(),
                 bodyWeight = bodyWeight,
@@ -65,7 +73,8 @@ function processNewCycleData(fs){
                 
 
               workout = {
-                cycleNumber: 1,
+                cycleNumber: cycleNumber,
+                cycleType: cycleType,
                 sessionNumber: 1,
                 date : date,
                 bodyWeight : bodyWeight,

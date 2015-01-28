@@ -1,6 +1,7 @@
 // gets last workout from mongo db 
 getLastWorkout = function(){
-    return Workouts.findOne({sessionNumber: Workouts.find().count()});
+    cycleNumber = getLargestCycleNumber();
+    return Workouts.find({cycleNumber: cycleNumber}, {sort: {sessionNumber: -1}}).fetch()[0];
 };
 
 // generates new workout with user entered bodyweight
@@ -20,7 +21,8 @@ generateWorkout = function(userEnteredBodyweight){
 
     // build workout object and return to view to be rendered by template
     workout = {
-        cycleNumber: 1,
+        cycleNumber: lastWorkout.cycleNumber,
+        cycleType: lastWorkout.cycleType,
         sessionNumber: (+lastWorkout.sessionNumber+1),
         date : getDate(),
         type : workoutType,
@@ -54,8 +56,14 @@ round = function(value, decimals) {
 // generates cycle number that can be used in the future
 // to differeniate macro cycles for user, returns 1 for fow
 // as place holder value
-getCycleNumber = function (){
-  return 1;
+getLargestCycleNumber = function (){
+
+  if(Workouts.find().count() == 0){
+    return 0;
+  }else{
+    return Workouts.find({}, {sort: {cycleNumber: -1}}).fetch()[0].cycleNumber;
+  }
+  
 };
 
 

@@ -1,4 +1,5 @@
 var clock, interval, timeLeft;
+var chime = new buzz.sound('/sounds/Ding.mp3');
 
 Template.setTemplate.helpers({
 
@@ -42,7 +43,7 @@ startSet = function(){
 // sets up the timer used to help the user time 
 // the rest period
 setupRestTimer = function(lengthOfRest){
-    interval = Meteor.setInterval(restTimer, 50);
+    interval = Meteor.setInterval(restTimer, 1000);
     clock = lengthOfRest;
 };
 
@@ -55,6 +56,7 @@ restTimer = function() {
     return;
   }
   else  {
+    chime.play();
     Meteor.clearInterval(interval);
   }
 };

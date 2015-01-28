@@ -1,4 +1,5 @@
 var clock, interval, timeLeft,reps, rest_flag;
+var chime = new buzz.sound('/sounds/Ding.mp3');
 
 Template.timerTemplate.helpers({
 
@@ -55,7 +56,7 @@ processGripData = function(){
 
     // get the database record from the data base and find the correct entry in
     // the sets array
-    currentWorkout = Workouts.findOne({sessionNumber: Workouts.find().count()});
+    currentWorkout = getLastWorkout();
     sets = currentWorkout.sets;
     sets[GRIP_COUNTER] = SET_COUNTER+1;
 
@@ -95,15 +96,18 @@ intervalTimer = function() {
     return;
   }
   else  {
+    chime.play();
     if(reps>0){
         if(!rest_flag){
             rest_flag = !rest_flag;
             clock = 4;
         }else{
+       
         reps = reps-1;
         clock = 8;
         }
     }else if(reps ==0){
+         chime.play();
        return Meteor.clearInterval(interval);
     }
   }
@@ -111,6 +115,6 @@ intervalTimer = function() {
 
 // sets up the interval timer (intervalTimer)
 setupTimer = function(input_reps){
-    interval = Meteor.setInterval(intervalTimer, 1);
+    interval = Meteor.setInterval(intervalTimer, 1000);
     reps = input_reps;
 };
