@@ -51,18 +51,19 @@ getLastWorkout = function(){
 generateWorkout = function(userEnteredBodyweight){
 
     //get lastworkout from collection and build new workout variables
-    var lastWorkout = getLastWorkout();
-    var workoutType = 'V',
-    repetitions = calculate_reps(workoutType),
-    effortRating = calculate_rpe().toString(),
-    resistance = [Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[0]+wt_increase()))/100,
+    var lastWorkout = getLastWorkout(),
+        workoutType = 'V',
+        repetitions = calculate_reps(workoutType),
+        effortRating = calculate_rpe().toString(),
+        resistance = [Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[0]+wt_increase()))/100,
                   Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[1]+wt_increase()))/100,
                   Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[2]+wt_increase()))/100],
-    repMax = [Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[0])).toString())/100,
+        repMax = [Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[0])).toString())/100,
               Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[1])).toString())/100,
-              Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[2])).toString())/100];
+              Math.round(100* calculate_1rm(+repetitions, +effortRating, +userEnteredBodyweight+(+resistance[2])).toString())/100],
+        workout;
 
-    // build workout object and return to view to be rendered by template
+        // build workout object and return to view to be rendered by template
     workout = {
         sessionNumber: (+lastWorkout.sessionNumber+1),
         date : getDate(),
@@ -73,7 +74,9 @@ generateWorkout = function(userEnteredBodyweight){
         grips : ['half crimp','pinch','3FP'],
         sets : ['','',''],
         resistance : resistance,
-        repMax : repMax
+        repMax : repMax,
+        owner: Meteor.userId(),
+        username: Meteor.user().username
     };
     return workout;
 };

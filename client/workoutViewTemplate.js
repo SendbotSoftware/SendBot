@@ -4,6 +4,7 @@ Template.workoutViewTemplate.helpers({
     return workout && workout.sessionNumber;
   },
   workouts: function () {
+    Meteor.call()
     return Workouts.find({owner:Meteor.userId()}, {sort: {sessionNumber: 1}}).fetch();
   }
 

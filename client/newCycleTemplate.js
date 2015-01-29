@@ -16,13 +16,7 @@ Template.newCycleStepTwoTemplate.events({
   'click .next': function () {
     Meteor.call('addWorkout', generateInitialWorkout(175), function(){
       //TODO use pub/sub to avoid excessive code duplication
-      Meteor.call('findWorkouts', {owner:Meteor.userId()}, {sort: {sessionNumber: 1}}, function(err, result) {
-        if(typeof(err) !== 'undefined') {
-          console.log(err);
-        } else {
-          Router.go('showWorkouts');
-        }
-      });
+      Router.go('showWorkouts');
     });
 
   }
