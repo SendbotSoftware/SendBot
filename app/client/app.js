@@ -29,12 +29,11 @@ Router.map(function () {
     this.route('set', {
         template: 'setTemplate',
         data : {
+            currentRPE: function () {return getLastWorkout().effortRating},
             currentGrip:  function () {return getLastWorkout().grips[GRIP_COUNTER]},
             currentRes: function () {return getLastWorkout().resistance[GRIP_COUNTER]}
         }
     });
-    
-
 });
 
 

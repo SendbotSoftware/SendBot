@@ -63,7 +63,7 @@ function processNewCycleData(fs){
                 bodyWeight = bodyWeight,
                 type = 'v',
                 repetitions = calculate_reps(type),
-                effortRating = calculate_rpe().toString(),
+                effortRating = calculate_rpe(cycleType).toString(),
                 grips = ['half_crimp','pinch','three_finger_open'],
                 sets = ['','',''],
                 repMax = timeToOneRM([hangTimeOne,hangTimeTwo,hangTimeThree],bodyWeight)

@@ -9,19 +9,9 @@ generateWorkout = function(userEnteredBodyweight){
 
     //get lastworkout from collection and build new workout variables
     var lastWorkout = getLastWorkout();
-
-    if(lastWorkout.cycleType = CYCLE_TYPE.ADVANCED){
-
-    }else if(lastWorkout.cycleType = CYCLE_TYPE.INTERMEDIATE){
-
-    }
-    else if(lastWorkout.cycleType = CYCLE_TYPE.NOVICE){
-
-    }
-
     var workoutType = WORKOUT_TYPE.VOLUME,
     repetitions = calculate_reps(workoutType),
-    effortRating = calculate_rpe().toString(),
+    effortRating = calculate_rpe(lastWorkout.cycleType).toString(),
     resistance = [Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[0]+weight_increase()))/100,
                   Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[1]+weight_increase()))/100,
                   Math.round(100* calculate_resistance(+repetitions, +effortRating, +userEnteredBodyweight, +lastWorkout.repMax[2]+weight_increase()))/100],
@@ -78,8 +68,15 @@ getLargestCycleNumber = function (){
 
 
 //calculate RPE number based upon workout type and reps
-calculate_rpe = function(wo_type, reps) {
-    return EFFORT.HIGH;
+calculate_rpe = function(cycleType) {
+    if(cycleType == CYCLE_TYPE.ADVANCED){
+      return EFFORT.HIGH;
+    }else if(cycleType == CYCLE_TYPE.INTERMEDIATE){
+      return EFFORT.HIGH;
+    }
+    else if(cycleType == CYCLE_TYPE.NOVICE){
+      return EFFORT.MODERATE;
+    }   
 };
 
 //calculate workout Reps based upon workout type
@@ -143,10 +140,10 @@ weight_increase = function() {
 //calculate 1rm
 calculate_1rm = function(reps, rpe, weight) {
     var array = [
-        [62, 66, 71, 74, 77, 80, 85, 90, 95, 100],
-        [60, 64, 68, 71, 74, 77, 80, 85, 90, 95],
-        [58, 62, 66, 68, 71, 74, 77, 80, 85, 90],
-        [56, 60, 64, 66, 68, 71, 74, 77, 80, 85]
+        [62, 66, 71, 74, 78, 81, 86, 90, 95, 100],
+        [60, 64, 68, 71, 75, 78, 81, 85, 90, 95],
+        [58, 62, 66, 68, 72, 75, 78, 80, 85, 90],
+        [56, 60, 64, 66, 69, 72, 75, 77, 80, 85]
     ];
     var row = 10 - rpe;
     var column = 10 - reps;
