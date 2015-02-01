@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="leaderboard"
+             errors="0"
+             failures="1"
+             tests="8">
+  
+  <testsuite errors="0" failures="1" hostname="" id=""
+    name="Leaderboard Test Basics" package="leaderboard" skipped="6"
+    tests="8" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;body&gt; was visible after 604 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Timed out while waiting for element &lt;div.message&gt; to be present for 5000 milliseconds.">
+        
+          <failure message="Expected &quot;visible&quot; but got: &quot;not found&quot;"></failure>
+        
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+</testsuites>
