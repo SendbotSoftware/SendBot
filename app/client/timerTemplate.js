@@ -7,7 +7,7 @@ Template.timerTemplate.helpers({
 
 Template.timerTemplate.events({
     'click #high-effort': function () {
-        processSetData();
+        goToSet();
     },
     'click #max-effort': function () {
         processGripData();
@@ -45,9 +45,9 @@ if (Meteor.isClient) {
 
 // go to timer after incrementing the counter of sets that user has performed
 // for given grip, effort level is recoreded as well
-goToTimer = function(){
+goToSet = function(){
     SET_COUNTER = SET_COUNTER + 1;
-    Router.go('timer');
+    Router.go('set');
 };
 
 // process the cumalative set data after the user has clicked the max effort 
