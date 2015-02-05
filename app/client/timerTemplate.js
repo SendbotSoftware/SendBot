@@ -43,7 +43,7 @@ if (Meteor.isClient) {
 }
 
 
-// go to timer after incrementing the counter of sets that user has performed
+// go to set after incrementing the counter of sets that user has performed
 // for given grip, effort level is recoreded as well
 goToSet = function(){
     SET_COUNTER = SET_COUNTER + 1;
