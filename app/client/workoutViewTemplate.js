@@ -22,4 +22,9 @@ Template.workoutViewTemplate.events({
   }
 });
 
+Template.workoutViewTemplate.rendered = function() {
+
+};
+
+
 

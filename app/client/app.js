@@ -26,6 +26,9 @@ Router.map(function () {
     this.route('timer', {
         template: 'timerTemplate',
     });
+    this.route('table', {
+        template: 'tableTemplate',
+    });
     this.route('set', {
         template: 'setTemplate',
         data : {
