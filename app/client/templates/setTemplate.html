@@ -1,14 +1,38 @@
 <template name="setTemplate">
 	<div class="outer">
-		 Your Current Grip is : {{currentGrip}}
-		 <br>
-		 Your Current Res is: {{currentRes}}
-		 <br>
-		 Your RPE Working Level is : {{currentRPE}}
-		 <br>
-		 Rest Timer : {{minutes}} : {{seconds}}
-		 <br>
-		 <br> 
-		 <button class="btn" id="start-set">Start Set</button>
+
+	  <a href="/">
+    <div class="logo-img-contain">
+      <img class="img" src="robot_title_bw.jpg">
+    </div>
+  </a>
+
+<div class="form-container">
+  <table class="table table-striped table-bordered table-condensed" >
+		 <tr>
+		 <td>Your Current Grip is : </td>
+		 <td>{{currentGrip}}</td>
+		 </tr>
+
+		  <tr>
+		 <td>Your Current Res is: </td>
+		 <td>{{currentRes}}</td>
+		 </tr>
+	
+		  <tr>
+		 <td>Your RPE Working Level is : </td>
+		 <td>{{currentRPE}}</td>
+		 </tr>
+	
+		  <tr>
+		 <td>Rest Timer : </td>
+		 <td>{{minutes}} : {{seconds}}</td>
+		 </tr>
+
+
+  </table>
+  <button class="next btn btn-info pull-right" id="start-set">Start Set</button>
+  </div>
+	
 	</div>  
 </template>

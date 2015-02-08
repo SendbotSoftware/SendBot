@@ -2,8 +2,8 @@
 
 Meteor.startup(function () {
 
-    Workouts.remove({});
-    //
+    
+    //Workouts.remove({});
     
 });
 

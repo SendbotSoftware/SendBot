@@ -1,4 +1,4 @@
-var clock, interval, timeLeft,reps, rest_flag;
+var clock, interval, timeLeft,reps, rest_flag,countdown_flag;
 var chime = new buzz.sound('/sounds/Ding.mp3');
 
 Template.timerTemplate.helpers({
@@ -19,9 +19,10 @@ Template.timerTemplate.events({
 // calls timer function
 Template.timerTemplate.rendered = function() {
 
+    countdown_flag = true;
     rest_flag = false;
     reps = 0;
-    clock = 8;
+    clock = 15;
 
     reps = Workouts.findOne({sessionNumber: Workouts.find().count()}).repetitions;
 
@@ -36,10 +37,22 @@ if (Meteor.isClient) {
     Template.timerTemplate.time = function() {
         return Session.get("time");
     };
-        Template.timerTemplate.reps = function(){
+
+    Template.timerTemplate.workMode = function() {
+        
+
+        if (Session.get("countdown")){
+            return "countdown";
+        }else if(Session.get("rest_flag")){
+            return "rest";
+        }else{
+            return "work";
+        }
+    };
+    
+    Template.timerTemplate.reps = function(){
         return Session.get("rep");
     };
-
 }
 
 
@@ -93,28 +106,39 @@ intervalTimer = function() {
     clock--;
     Session.set("time", clock);
     Session.set("rep", reps);
+    Session.set("rest_flag",rest_flag);
+    Session.set("countdown",countdown_flag);
     return;
   }
   else  {
+    
     chime.play();
+  if(!countdown_flag){
     if(reps>0){
         if(!rest_flag){
-            rest_flag = !rest_flag;
+            rest_flag = true;
             clock = 4;
         }else{
-       
+        rest_flag = false;
+
         reps = reps-1;
         clock = 8;
         }
+        Session.set("rest_flag",rest_flag);   
     }else if(reps ==0){
          chime.play();
        return Meteor.clearInterval(interval);
     }
+  }else {
+    countdown_flag = false;
+    Session.set("countdown",countdown_flag);
+    clock = 8;
   }
+}
 };
 
 // sets up the interval timer (intervalTimer)
 setupTimer = function(input_reps){
-    interval = Meteor.setInterval(intervalTimer, 1000);
+    interval = Meteor.setInterval(intervalTimer, 200);
     reps = input_reps;
 };

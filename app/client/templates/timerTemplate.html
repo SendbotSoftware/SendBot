@@ -1,11 +1,35 @@
 <template name="timerTemplate">
 	<div class="outer">
-		 The time is: {{time}}
-		 <br>
-		 The Rep # is: {{reps}}
-		 <br>
+
+		  <a href="/">
+    <div class="logo-img-contain">
+      <img class="img" src="robot_title_bw.jpg">
+    </div>
+  </a>
+<div class="form-container">
+  <table class="table table-striped table-bordered table-condensed" >
+		 
+  		 <tr>
+		 <td>You currently are in: </td>
+		 <td> {{workMode}}</td>
+		 </tr>
+
+
+		 <tr>
+		 <td>Seconds Left: </td>
+		 <td> {{time}}</td>
+		 </tr>
+
+		 <tr>
+		 <td>Repititions Left: </td>
+		 <td>{{reps}}</td>
+		 </tr>
+
+</table>
+		<button class="next btn btn-info pull-right" id="high-effort">High Effort</button>
 		<br>
-		<button class="btn" id="high-effort">High Effort</button>
- 		<button class="btn" id="max-effort">Max Effort</button>
+		<br>
+ 		<button class="next btn btn-info pull-right" id="max-effort">Max Effort</button>
+ 		</div>
 	</div>  
 </template>

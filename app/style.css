@@ -1,7 +1,4 @@
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,11 +9,7 @@ body {
   width: 90%;
   padding: 0;
 }
-button {
-    display:inline-block;         
-    margin:0 auto;
-    width: 60px; 
-}
+
 
 
 
@@ -41,14 +34,18 @@ button {
 }
 
 .container{
-  width:100%;
-  margin-right: -50%;
+  width:12%;
+  margin-left: 55%;
+  margin-bottom:2%;
 }
 
-button {
-    display:inline-block;         
-    margin:0 auto;
-    width: 120px; 
+.form-container{
+  width:200px;
+  margin-left: 50%;
+  margin-bottom:2%;
+}
+.input {
+width: 100px;
 }
 
 .logo {
@@ -214,21 +211,17 @@ button {
 @media only screen and (max-width: 768px) {
   #date, tr td:nth-child(2)   { display:none; visibility:hidden; }
   #bodyWeight, tr td:nth-child(3)   { display:none; visibility:hidden; }
-  #effortRating, tr td:nth-child(6)  { display:none; visibility:hidden; }
-  #type, tr td:nth-child(4)      { display:none; visibility:hidden; }
-  #reps, tr td:nth-child(5)     { display:none; visibility:hidden; }  
+  #reps, tr td:nth-child(4)     { display:none; visibility:hidden; }  
 }
 
 @media only screen and (max-width: 420px) {
   #date, tr td:nth-child(2)   { display:none; visibility:hidden; }
   #bodyWeight, tr td:nth-child(3)   { display:none; visibility:hidden; }
-  #effortRating, tr td:nth-child(6)  { display:none; visibility:hidden; }
-  #type, tr td:nth-child(4)      { display:none; visibility:hidden; }
-  #reps, tr td:nth-child(5)     { display:none; visibility:hidden; }  
+  #reps, tr td:nth-child(4)     { display:none; visibility:hidden; }  
 
-  #grip1res, tr td:nth-child(8)  { display:none; visibility:hidden; }
-  #grip2res, tr td:nth-child(10)      { display:none; visibility:hidden; }
-  #grip3res, tr td:nth-child(12)     { display:none; visibility:hidden; }  
+  #grip1res, tr td:nth-child(6)  { display:none; visibility:hidden; }
+  #grip2res, tr td:nth-child(8)      { display:none; visibility:hidden; }
+  #grip3res, tr td:nth-child(10)     { display:none; visibility:hidden; }  
 
 
 

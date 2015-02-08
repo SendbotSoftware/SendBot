@@ -1,8 +1,20 @@
 <template name="newWorkoutTemplate">
   <div class="outer">
+  <a href="/">
+    <div class="logo-img-contain">
+      <img class="img" src="robot_title_bw.jpg">
+    </div>
+  </a>
+  
+  	  <br>
+  	  <div class="form-container">
 	  <form id="newWorkoutForm" data-parsley-validate>
-	    Bodyweight : <input type="text" id="bodyWeight" data-parsley-range="[40,300]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" > <br/>
+	    <label for="bodyWeight">Body Weight:</label>
+	    <input class="input" type="text" id="bodyWeight" data-parsley-range="[40,300]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" >
+	    <br>
+	    <span class="next btn btn-info pull-left">Submit</span> 
 	  </form>
-	  <button class="next">Next</button>
+	  </div>
+ 
   </div>
 </template>
