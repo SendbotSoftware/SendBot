@@ -11,7 +11,7 @@ Template.newWorkoutTemplate.events({
 
 function newWorkout(){
 	if ($('#newWorkoutForm').parsley().validate()== true){
-    	Workouts.insert(generateWorkout($('#bodyWeight').val()));
+    	Workouts.insert(generateWorkout($('#bodyweight').val()));
     	Router.go('set');
     };
 }

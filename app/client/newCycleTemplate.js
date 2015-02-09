@@ -39,7 +39,7 @@ Template.newCycleTemplate.events({
 
 function processNewCycleData(fs){ 
     
-          var bodyWeight = $('#bodyWeight').val(),
+          var bodyWeight = $('#bodyweight').val(),
               half_crimp = $('#half_crimp').is(':checked') ,
               pinch = $('#pinch').is(':checked'),
               four_finger_open = $('#four_finger_open').is(':checked'), 

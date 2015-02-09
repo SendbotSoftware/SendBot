@@ -17,7 +17,7 @@ body {
   width: 20%;
   height: 10%;
   margin-top: 5%;
-  margin-left: 50%;
+  margin-left: 40%;
   margin-bottom: 5%;
   overflow: hidden;
 }
@@ -31,22 +31,30 @@ body {
 .outer {
   margin-left: 2.5%;
   max-width: 90%;
+  height:100%;
 }
 
 .container{
-  width:12%;
+  width:30%;
   margin-left: 55%;
   margin-bottom:2%;
 }
 
 .form-container{
-  width:200px;
-  margin-left: 50%;
-  margin-bottom:2%;
+  width:40%;
+  margin-left: 30%;
+  margin-bottom:20%;
 }
-.input {
-width: 100px;
+
+.table-container{
+  width:60%;
+  margin-left: 20%;
+  margin-bottom:20%;
 }
+
+
+
+
 
 .logo {
   background: url('robot.jpg');
@@ -209,13 +217,11 @@ width: 100px;
   
 
 @media only screen and (max-width: 768px) {
-  #date, tr td:nth-child(2)   { display:none; visibility:hidden; }
   #bodyWeight, tr td:nth-child(3)   { display:none; visibility:hidden; }
   #reps, tr td:nth-child(4)     { display:none; visibility:hidden; }  
 }
 
 @media only screen and (max-width: 420px) {
-  #date, tr td:nth-child(2)   { display:none; visibility:hidden; }
   #bodyWeight, tr td:nth-child(3)   { display:none; visibility:hidden; }
   #reps, tr td:nth-child(4)     { display:none; visibility:hidden; }  
 
