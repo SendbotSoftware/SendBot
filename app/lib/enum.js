@@ -1,15 +1,11 @@
 //code shared between client and server
-Workouts = new Mongo.Collection("workout");
-
+//Enumeration Definitions
 CYCLE_TYPE = {
 	NOVICE: 'novice',
 	INTERMEDIATE: 'intermediate',
 	ADVANCED: 'advanced'
-}
+};
 
-
-
-//Enumeration Definitions
 EFFORT = {
   MODERATE: 8,
   HIGH : 9, 
