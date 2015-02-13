@@ -1,12 +1,11 @@
 <template name="timerTemplate">
-	<div class="outer">
-
-		  <a href="/">
-    <div class="logo-img-contain">
-      <img class="img" src="robot_title_bw.jpg">
-    </div>
-  </a>
-<div class="form-container">
+  <div class="row">
+        <div class="twelve columns text-center">
+          <h1><a href="/"><img src="robot_title_c.jpg" style="max-height:140px; max-width:100%;"></a></h1>
+        </div>
+      </div>
+        <div class="row">
+        <div class="twelve columns text-center">
   <table id="iseqchart" class="table table-striped table-bordered table-condensed" >
 		 
   		 <tr>
@@ -26,10 +25,10 @@
 		 </tr>
 
 </table>
-		<button class="next btn btn-info pull-right" id="high-effort">High Effort</button>
+		<button class="button radius" id="high-effort">High Effort</button>
 		<br>
 		<br>
- 		<button class="next btn btn-info pull-right" id="max-effort">Max Effort</button>
+ 		<button class="button radius" id="max-effort">Max Effort</button>
  		</div>
 	</div>  
 </template>

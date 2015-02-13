@@ -1,17 +1,19 @@
 <template name="workoutViewTemplate">
+    <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
+<script type="text/javascript" src="responsive-tables.js"></script>
 
-<div class="outer">
-    <a href="/">
-    <div class="logo-img-contain">
-      <img class="img" src="robot_title_c.jpg">
-    </div>
-  </a>
-    <div class="subtitle"></div>
+    <div class="row">
+        <div class="twelve columns text-center">
+          <h1><a href="/"><img src="robot_title_c.jpg" style="max-height:140px; max-width:100%;"></a></h1>
+        </div>
+      </div>
+        <div class="row">
+        <div class="twelve columns text-center">
     
   {{#with workouts}}
     {{#if count}}
 
-      <table id="iseqchart" class="table table-striped table-bordered table-condensed" >
+      <table class="responsive">
         <thead>
           <tr>
           <th id="sesionNumber">Session</th>
@@ -43,24 +45,25 @@
         
 
     {{else}}
-        <div class="container">
-        <button class="btn btn-mini"  id="new-cycle">New Cycle</button>
-        </div>
+<button class="button radius" id="new-cycle">New Cycle</button>
+  
+       
     {{/if}}
                 
           {{#if selectedWorkout}}
-          <div class="container">  
-          <button class="btn btn-mini" id="edit-workout">Edit Workout</button>
-            </div>
+ 
+        
+          <button class="button radius" id="edit-workout">Edit Workout</button>       
         {{else}}
 
 
       {{/if}}
   {{/with}}
+  <br>
+  <br>
+    <button class="button radius" id="new-workout">New Workout</button>
   
-  <div class="container">
-  <button class="btn btn-mini"  id="new-workout">New Workout</button>
-  </div>
-
+  
+</div> 
   </div>  
 </template>

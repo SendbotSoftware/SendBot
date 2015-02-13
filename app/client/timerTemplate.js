@@ -127,6 +127,7 @@ intervalTimer = function() {
         Session.set("rest_flag",rest_flag);   
     }else if(reps ==0){
          chime.play();
+         //https://remysharp.com/2010/12/23/audio-sprites
        return Meteor.clearInterval(interval);
     }
   }else {

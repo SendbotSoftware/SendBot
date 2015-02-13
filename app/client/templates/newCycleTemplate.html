@@ -1,13 +1,14 @@
 
 <template name="newCycleTemplate">
-<div class="outer">
+  <div class="row">
+        <div class="twelve columns text-center">
+          <h1><a href="/"><img src="robot_title_c.jpg" style="max-height:140px; max-width:100%;"></a></h1>
+        </div>
+      </div>
 
-     <a href="/">
-    <div class="logo-img-contain">
-      <img class="img" src="robot_title_bw.jpg">
-    </div>
-  </a>
-  <div class="form-container">
+<div class="row">
+        <div class="small-2 large-4 columns"><p></p></div>
+  <div class="small-4 large-4 columns">
  <form id="demo-form" data-parsley-validate>
    <div class="first block1 show"> 
       <label for="bodyWeight">Body Weight:</label>
@@ -25,19 +26,21 @@
       <input type="radio" name="cycleType" id="cycleN" value="novice" required data-parsley-group="block1" /> Novice <br/>
       <input type="radio" name="cycleType" id="cycleI" value="intermediate" data-parsley-group="block1" /> Intermediate <br/>
       <input type="radio" name="cycleType" id="cycleA" value="advanced" data-parsley-group="block1" /> Advanced <br/>
-      <br>
-     <span class="next btn btn-info pull-left" data-current-block="1" data-next-block="2" id="next">Next ></span>
+     <span class="next button radius" data-current-block="1" data-next-block="2" id="next">Next ></span>
    </div>
  
    <div class="second block2 hidden">
       Grip 1 HangTime :  <input type="text" id="hangTimeOne" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" data-parsley-group="block2" style="width: 50px;"> <br/>
       Grip 2 HangTime  : <input type="text" id="hangTimeTwo" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" data-parsley-group="block2" style="width: 50px;"> <br/>
       Grip 3 HangTime  : <input type="text" id="hangTimeThree" data-parsley-range="[0,200]" data-parsley-type="digits" value="{{bodyWeight}}" data-parsley-required="true" data-parsley-group="block2" style="width: 50px;"> <br/>
-      <span class="next btn btn-info pull-left" data-current-block="2" data-next-block="1">Previous</span>
-     <input type="submit" id="submit" class="btn btn-default pull-right" />
+      <span class="next button radius" data-current-block="2" data-next-block="1">Previous</span>
+     <input type="submit" id="submit" class="button radius" />
    </div>
 </form>
 </div>
+  <div class="small-6 large-4 columns"><p></p></div>
 </div>
+
+
 </template>
 
