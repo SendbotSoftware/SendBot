@@ -1,0 +1,29 @@
+<template name="workoutItem">
+  <div class="workout" {{attributes}}>
+    <div class="workout-content">
+      <p>
+        {{username}}
+      <span>{{date}}</span>
+      <span>{{bodyWeight}}</span>
+      <span>{{type}}</span>
+      <span>{{repetitions}}</span>
+      <span>{{effortRating}}</span>
+
+      <!-- TODO @kerwinloukusa,@rbalakrishnan Refactor and make this a loop-->
+      <span>{{sets.[0]}}</span>
+      <span>{{resistance.[0]}}</span>
+      <span>{{repMax.[0]}}</span>
+
+      <span>{{sets.[1]}}</span>
+      <span>{{resistance.[1]}}</span>
+      <span>{{repMax.[1]}}</span>
+
+      <span>{{sets.[2]}}</span>
+      <span>{{resistance.[2]}}</span>
+      <span>{{repMax.[2]}}</span>
+
+      <a href="{{pathFor 'workoutEdit'}}">Edit</a>
+      </p>
+    </div>
+  </div>
+</template>
