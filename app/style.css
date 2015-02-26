@@ -8,14 +8,14 @@ body {
   font-size: 12px;
   font-weight: normal;
   margin-top: 0em;
-  margin-left: -300px;
-  width: 1200px;
+  margin-left: 10%;
+  width: 90%;
   padding: 0;
 }
 
 .outer {
-  margin: 0 auto;
-  max-width: 250px;
+  margin-left: 10%;
+  max-width: 90%;
 }
 
 .logo {
@@ -23,10 +23,9 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 5em;
-  margin: 0 auto .75em;
-  margin-left: 600px; 
-  width: 7em;
+  height: 12em;
+  margin-left: 60%; 
+  width: 10em;
 }
 
 .title {
@@ -34,10 +33,12 @@ body {
   font-weight: 600;
   letter-spacing: .3em;
   margin: 0 0 .25em;
-  margin-left: 585px; 
+  margin-left: 52%; 
   text-align: center;
   text-indent: .3em;
   text-transform: uppercase;
+  width: 10em;
+  height: 12em;
 }
 
 .subtitle {
@@ -51,8 +52,8 @@ body {
   border-top: 1px solid #f1f1f1;
   counter-reset: ol-counter;
   list-style-type: none;
-  margin: 0 0 1.5em;
-  width: 1200px;
+  margin: 1%;
+  width: 100%;
   padding: 0;
 }
 

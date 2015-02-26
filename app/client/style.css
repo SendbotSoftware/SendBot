@@ -10,19 +10,15 @@
 @error_list_font_color: red;
 
 
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
 
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
-  margin: 3em 0;
-  padding: 0;
+}
+
+.page {
+ width: 50%;
 }
 
 .menu {
@@ -36,8 +32,7 @@ body {
 }
 
 .outer {
-  margin: 0 auto;
-  max-width: 480px;
+  width: 50%;
 }
 
 .logo {
@@ -49,15 +44,6 @@ body {
   margin: 0 auto .75em;
 }
 
-.title {
-  font-size: 1.5em;
-  font-weight: 600;
-  letter-spacing: .3em;
-  margin: 0 0 .25em;
-  text-align: center;
-  text-indent: .3em;
-  text-transform: uppercase;
-}
 
 .subtitle {
   color: #999;
@@ -68,10 +54,9 @@ body {
 
 .workoutView {
   border-top: 1px solid #f1f1f1;
-  counter-reset: ol-counter;
   list-style-type: none;
-  margin: 0 0 1.5em;
   padding: 0;
+  width: 60%;
 }
 
 .workout {
@@ -178,7 +163,7 @@ body {
     position: fixed;
     bottom: 0;
     background-color: #fafafa;
-    width: 100%;
+    width: 50%;
     padding: 12px 15px;
     border-top: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
