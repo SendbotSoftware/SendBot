@@ -1,0 +1,53 @@
+<template name="newCycleTimerTemplate">
+  <div class="row">
+        <div class="twelve columns text-center">
+          <h1><a href="/"><img src="robot_title_c.jpg" style="max-height:140px; max-width:100%;"></a></h1>
+        </div>
+      </div>
+        <div class="row">
+        <div class="twelve columns text-center">
+  <table id="iseqchart" class="table table-striped table-bordered table-condensed" >
+		 
+  		 <tr>
+		 <td>You currently are in: </td>
+		 <td> {{workMode}}</td>
+		 </tr>
+
+
+		 <tr>
+		 <td>Seconds Left: </td>
+		 <td> {{time}}</td>
+		 </tr>
+
+		 <tr>
+		 <td>Repititions Left: </td>
+		 <td>{{reps}}</td>
+		 </tr>
+
+</table>
+
+<div class="btn-group btn-input clearfix">
+  <button type="button" class="btn btn-default dropdown-toggle form-control" data-toggle="dropdown">
+    <span data-bind="label">Select Reps Completed</span> <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">1 Rep</a></li>
+    <li><a href="#">2 Reps</a></li>
+    <li><a href="#">3 Reps</a></li>
+    <li><a href="#">4 Reps</a></li>
+    <li><a href="#">5 Reps</a></li>
+    <li><a href="#">6 Reps</a></li>
+    <li><a href="#">7 Reps</a></li>
+    <li><a href="#">8 Reps</a></li>
+    <li><a href="#">9 Reps</a></li>
+    <li><a href="#">10 Reps</a></li>
+  </ul>
+ 
+</div>
+<br>
+<br>
+ <button class="button radius"  id="submit">Submit</button>
+
+ 		</div>
+	</div>  
+</template>

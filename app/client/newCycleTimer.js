@@ -1,0 +1,145 @@
+var clock, interval, timeLeft,reps, rest_flag,countdown_flag;
+var chime = new buzz.sound('/sounds/Ding.mp3');
+
+Template.newCycleTimerTemplate.helpers({
+
+});
+
+Template.newCycleTimerTemplate.events({
+    'click #submit': function () {
+        goToNextSet();
+    }
+
+});
+
+// called on template render, intializes variables and
+// calls timer function
+Template.newCycleTimerTemplate.rendered = function() {
+
+    countdown_flag = true;
+    rest_flag = false;
+    reps = 0;
+    clock = 15;
+
+    reps = Workouts.findOne({sessionNumber: Workouts.find().count()}).repetitions;
+
+    setupTimer(reps);  
+    
+    // commented out for now, need to investigate the rendered function
+    // if(!this._rendered) {
+    //     this._rendered = true;
+    //     setupTimer(reps);  
+    // }
+}
+
+// helper methods to get timer and rep data for view
+if (Meteor.isClient) {
+    Template.newCycleTimerTemplate.time = function() {
+        return Session.get("time");
+    };
+
+    Template.newCycleTimerTemplate.workMode = function() {
+        
+
+        if (Session.get("countdown")){
+            return "countdown";
+        }else if(Session.get("rest_flag")){
+            return "rest";
+        }else{
+            return "work";
+        }
+    };
+    
+    Template.newCycleTimerTemplate.reps = function(){
+        return Session.get("rep");
+    };
+}
+
+
+// go to set after incrementing the counter of sets that user has performed
+// for given grip, effort level is recoreded as well
+function goToNextSet(){
+    SET_COUNTER = SET_COUNTER + 1;
+    Router.go('newCycleSet');
+};
+
+// process the cumalative set data after the user has clicked the max effort 
+// button, meaning that their work on this grip is done for the day
+function processGripData(){
+
+    // get the database record from the data base and find the correct entry in
+    // the sets array
+    currentWorkout = getLastWorkout();
+    sets = currentWorkout.sets;
+    sets[GRIP_COUNTER] = SET_COUNTER+1;
+
+    // set the proper value in the workout document
+    Workouts.update({
+        _id: currentWorkout._id
+    }, {
+        $set: {sets:sets}
+    });
+
+    // reset the set counter, and increment the grip counter
+    SET_COUNTER = 0;
+    GRIP_COUNTER = GRIP_COUNTER+1;
+
+    // if the grip counter is less then three, continue the workout,
+    // if the grip counter is equal to 3, clear working variables and
+    // proceed to viewing workouts
+    if(GRIP_COUNTER<3){
+        Meteor.clearInterval(interval);
+        Router.go('set');
+    }else{
+        GRIP_COUNTER = 0;
+        Meteor.clearInterval(interval);
+        Router.go('workoutView');
+    }
+
+}
+
+// the timer used to time the sets, assumes fixed work/rest periods of 
+// 7 seconds on, 3 seconds off, uses global variable reps and rest flag
+// to process states
+function intervalTimer() {
+  if (clock > 0) {
+    clock--;
+    Session.set("time", clock);
+    Session.set("rep", reps);
+    Session.set("rest_flag",rest_flag);
+    Session.set("countdown",countdown_flag);
+    return;
+  }
+  else  {
+    
+    chime.play();
+  if(!countdown_flag){
+    if(reps>0){
+        if(!rest_flag){
+            rest_flag = true;
+            clock = 4;
+        }else{
+        rest_flag = false;
+
+        reps = reps-1;
+        clock = 8;
+        }
+        Session.set("rest_flag",rest_flag);   
+    }else if(reps ==0){
+         chime.play();
+         //https://remysharp.com/2010/12/23/audio-sprites
+       return Meteor.clearInterval(interval);
+    }
+  }else {
+    countdown_flag = false;
+    Session.set("countdown",countdown_flag);
+    clock = 8;
+  }
+}
+};
+
+// sets up the interval timer (intervalTimer)
+function setupTimer(input_reps){
+    interval = Meteor.setInterval(intervalTimer, 200);
+    reps = input_reps;
+};
